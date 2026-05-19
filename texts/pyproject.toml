@@ -6,10 +6,11 @@ build-backend = "hatchling.build"
 name = "nomai-db"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["textual>=0.80"]
 
 [project.scripts]
-nomai-db = "nomai_db.__main__:main"
+nomai-db     = "nomai_db.__main__:main"
+nomai-db-tui = "nomai_db.tui:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/nomai_db"]
