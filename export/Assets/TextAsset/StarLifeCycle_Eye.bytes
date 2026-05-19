@@ -1,0 +1,10 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>At the end of its lifespan, our sun collapsed under its own gravity and then exploded in a violent supernova.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

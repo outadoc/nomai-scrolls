@@ -1,0 +1,55 @@
+<DialogueTree>
+	<NameField>Chert</NameField>
+	
+	<DialogueNode>
+		<Name>WaitingForOthers</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>The stars were beautiful, weren’t they? Even if our star is what ultimately killed us.</Page>
+			<Page>I’ll wait here and remember them while you gather everybody.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ReadyToPlay</Name>
+		<EntryCondition>AllTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>Shall I begin?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes.</Text>
+				<DialogueTarget>StartPlaying</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Not yet.</Text>
+				<DialogueTarget>NotYet</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>StartPlaying</Name>
+		<Dialogue>
+			<Page>Well, then, here I go!</Page>
+		</Dialogue>
+		<SetCondition>IsChertPlaying</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotYet</Name>
+		<Dialogue>
+			<Page>Take your time! I don’t think there’s anything left to go supernova.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Farewell</Name>
+		<EntryCondition>JamSessionIsOver</EntryCondition>
+		<Dialogue>
+			<Page>Even if it’s over now, I had a good time learning.</Page>
+			<Page>But I think the rules are about to change.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

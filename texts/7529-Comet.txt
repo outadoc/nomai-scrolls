@@ -1,0 +1,64 @@
+<AstroObjectEntry>
+	<ID>COMET</ID>
+	
+	<Entry>
+		<ID>COMET_SHUTTLE</ID>
+		<Name>Frozen Nomai Shuttle</Name>
+		<AltPhotoCondition>COMET_SHUTTLE_X1</AltPhotoCondition>
+		<Curiosity>COMET_CORE</Curiosity>
+
+		<ExploreFact>
+			<ID>COMET_SHUTTLE_X1</ID>
+			<Text>I found a Nomai shuttle almost completely encased in ice.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>COMET_SHUTTLE_X2</ID>
+			<Text>The Nomai landed on the Interloper not long after its arrival in the solar system. The shuttle's equipment heard strange energy readings coming from somewhere beneath the surface.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>COMET_SHUTTLE_X3</ID>
+			<Text>There were three Nomai aboard the shuttle. One of them stayed behind to keep the shuttle warm while the other two explored the Interloper.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>COMET_SHUTTLE_X4</ID>
+			<Text>Clary, the Nomai who stayed behind, lost contact with the other two after they descended below the Interloper's surface.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>COMET_INTERIOR</ID>
+		<Name>Ruptured Core</Name>
+		<Curiosity>COMET_CORE</Curiosity>
+		<IsCuriosity/>
+				
+		<RumorFact>
+			<ID>COMET_INTERIOR_R1</ID>
+			<RumorName>Subsurface Energy Readings</RumorName>
+			<SourceID>COMET_SHUTTLE</SourceID>
+			<Text>The shuttle's equipment heard strange energy readings coming from somewhere beneath the surface.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>COMET_INTERIOR_R2</ID>
+			<RumorName>Subsurface Energy Readings</RumorName>
+			<SourceID>COMET_SHUTTLE</SourceID>
+			<Text>Two of the Nomai located a fissure in the ice on the Interloper’s sunward side. They descended inside to investigate.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>COMET_INTERIOR_X1</ID>
+			<Text>I found the two missing members of the Nomai shuttle crew near a large ruptured stone that looks like it exploded from the inside.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>COMET_INTERIOR_X2</ID>
+			<Text>The Nomai traced the strange energy readings to a spherical stone casing filled with some form of exotic matter.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>COMET_INTERIOR_X3</ID>
+			<Text>They determined the exotic matter was both lethal and under extreme pressure. If the stone were to rupture, the exotic matter within would rapidly expand, completely blanketing the solar system almost instantaneously.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>COMET_INTERIOR_X4</ID>
+			<Text>One of the Nomai stayed behind to examine the alien matter while the other rushed back to the surface to warn the rest of the Nomai.</Text>
+		</ExploreFact>
+	</Entry>	
+</AstroObjectEntry>

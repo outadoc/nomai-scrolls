@@ -1,0 +1,12 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>FUTURE SITE OF OUR NEXT EXHIBIT!</Page>
+			<Page>If you’ve enjoyed your time with Outer Wilds, please consider supporting our planned museum expansion.</Page>
+			<Page>Our quest to explore the furthest reaches of our solar system wouldn’t be possible without generous visitors like you! We thank you profusely for your support, and we hope to see you again soon.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

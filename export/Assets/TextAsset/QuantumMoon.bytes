@@ -1,0 +1,137 @@
+<AstroObjectEntry>
+	<ID>QUANTUM_MOON</ID>
+
+	<Entry>
+		<ID>QUANTUM_MOON</ID>
+		<Name>Quantum Moon</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+		<IsCuriosity/>
+
+		<RumorFact>
+			<ID>QUANTUM_MOON_R1</ID>
+			<SourceID>BH_WARP_RECEIVER</SourceID>
+			<Text>The Nomai on Brittle Hollow observed a phantom moon that would sometimes appear in the sky.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>QUANTUM_MOON_R2</ID>
+			<SourceID>CT_QUANTUM_MOON_LOCATOR</SourceID>
+			<Text>The Nomai on Ember Twin observed a moon that would disappear when no one was watching.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>QUANTUM_MOON_R3</ID>
+			<Text>A Nomai named Solanum landed a shuttle on the Quantum Moon.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>QUANTUM_MOON_R4</ID>
+			<Text>Chert’s research notes mention a Quantum Moon that no Hearthian has been able to land on.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>QUANTUM_MOON_X1</ID>
+			<Text>I was able to land on the surface of the Quantum Moon.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>QUANTUM_MOON_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>I found a dead Nomai in a space suit near the south pole.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>QM_SHUTTLE</ID>
+			<Name>Solanum's Shuttle</Name>
+			<AltPhotoCondition>QUANTUM_MOON_X1</AltPhotoCondition>
+			<Curiosity>QUANTUM_MOON</Curiosity>
+
+			<ExploreFact>
+				<ID>QM_SHUTTLE_X1</ID>
+				<Text>A Nomai named Solanum landed her shuttle at the Quantum Moon's south pole and prepared to make the rest of the journey on foot.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SHUTTLE_X2</ID>
+				<Text>Visitors to the Quantum Moon always arrive at the south pole (for reasons unknown to the Nomai).</Text>
+			</ExploreFact>
+		</Entry>
+
+		<Entry>
+			<ID>QM_SHRINE</ID>
+			<Name>Quantum Shrine</Name>
+			<Curiosity>QUANTUM_MOON</Curiosity>
+
+			<RumorFact>
+				<ID>QM_SHRINE_R1</ID>
+				<SourceID>BH_QUANTUM_RESEARCH_TOWER</SourceID>
+				<Text>The Nomai built a shrine on the Quantum Moon to aid in the pilgrimage to its sixth location.</Text>
+			</RumorFact>
+			<ExploreFact>
+				<ID>QM_SHRINE_X1</ID>
+				<Text>A Nomai shrine that wanders about the Quantum Moon.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SHRINE_X2</ID>
+				<IgnoreMoreToExplore/>
+				<Text>"You have recalled the rule of quantum imaging" is inscribed next to a mural of a tower on an island.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SHRINE_X3</ID>
+				<IgnoreMoreToExplore/>
+				<Text>"Recall the rule of quantum entanglement" is inscribed next to a mural of a quantum shard in a cave.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SHRINE_X4</ID>
+				<IgnoreMoreToExplore/>
+				<Text>"Recall the rule of the sixth location" is inscribed next to a mural of a tower hanging above a black hole.</Text>
+			</ExploreFact>
+		</Entry>
+
+		<Entry>
+			<ID>QM_SIXTH_LOCATION</ID>
+			<Name>Sixth Location</Name>
+			<Curiosity>QUANTUM_MOON</Curiosity>
+
+			<RumorFact>
+				<ID>QM_SIXTH_LOCATION_R1</ID>
+				<SourceID>CT_QUANTUM_MOON_LOCATOR</SourceID>
+				<Text>The Quantum Moon sometimes disappears, possibly to an unknown sixth location.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>QM_SIXTH_LOCATION_R2</ID>
+				<SourceID>BH_QUANTUM_RESEARCH_TOWER</SourceID>
+				<Text>Many Nomai went on a pilgrimage during which the Quantum Moon carried them to its sixth and most secret location.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>QM_SIXTH_LOCATION_R3</ID>
+				<SourceID>BH_QUANTUM_RESEARCH_TOWER</SourceID>
+				<Text>To explore the sixth location, the shrine on the Quantum Moon must be on the moon’s north pole.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>QM_SIXTH_LOCATION_X1</ID>
+				<Text>I met a living Nomai named Solanum at the south pole!</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SIXTH_LOCATION_X3</ID>
+				<IgnoreMoreToExplore/>
+				<Text>The Quantum Moon is the Eye of the universe's moon.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SIXTH_LOCATION_X5</ID>
+				<IgnoreMoreToExplore/>
+				<Text>At this location, the Quantum Moon becomes a reflection of the Eye itself.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SIXTH_LOCATION_X4</ID>
+				<IgnoreMoreToExplore/>
+				<Text>The Eye is likely the source of all macroscopic quantum phenomena in the solar system.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SIXTH_LOCATION_X2</ID>
+				<Text>Solanum wonders what would happen if a conscious observer were to enter the Eye.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>QM_SIXTH_LOCATION_X6</ID>
+				<IgnoreMoreToExplore/>
+				<Text>Solanum has a hypothesis that she may not be entirely alive.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+</AstroObjectEntry>

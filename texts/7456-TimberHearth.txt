@@ -1,0 +1,148 @@
+<AstroObjectEntry>
+	<ID>TIMBER_HEARTH</ID>
+
+	<Entry>
+		<ID>TH_VILLAGE</ID>
+		<Name>Village</Name>
+		<IgnoreMoreToExplore/>
+		
+		<ExploreFact>
+			<ID>TH_VILLAGE_X1</ID>
+			<Text>The one and only Hearthian village, as well as the main source of explosions on this planet.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_VILLAGE_X2</ID>
+			<Text>The Nomai statue in the observatory opened its eyes and looked at me! I saw strange glowing lights and my own memories flashed before my eyes.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_VILLAGE_X3</ID>
+			<Text>Hal says the statue has never opened its eyes before (despite Hornfels' best efforts).</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>TH_ZERO_G_CAVE</ID>
+			<Name>Zero-G Cave</Name>
+
+			<RumorFact>
+				<ID>TH_ZERO_G_CAVE_R1</ID>
+				<Text>I hear Gossan has the zero-g cave set up if I want a refresher before I launch.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>TH_ZERO_G_CAVE_X1</ID>
+				<Text>A cave at the very center of Timber Hearth used by Outer Wilds Ventures to train new astronauts.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>TH_ZERO_G_CAVE_X2</ID>
+				<Text>I successfully repaired another "satellite" for Gossan.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+
+	<Entry>
+		<ID>TH_IMPACT_CRATER</ID>
+		<Name>Dark Bramble Seed</Name>
+
+		<RumorFact>
+			<ID>TH_IMPACT_CRATER_R1</ID>
+			<RumorName>Harmonica Signal</RumorName>
+			<SourceID>TM_NORTH_POLE</SourceID>
+			<Text>Esker's signalscope log reports harmonica music coming from somewhere on Timber Hearth. They claim it sounds just like Feldspar's harmonica, but Feldspar disappeared in space ages ago.</Text>
+		</RumorFact>
+<!-- 		<RumorFact>
+			<ID>TH_IMPACT_CRATER_R2</ID>
+			<RumorName>Crater Smoke</RumorName>
+			<Text>Tektite left a note saying they saw smoke coming from Youngbark Crater (near the north pole) and went to investigate.</Text>
+		</RumorFact> -->
+
+		<ExploreFact>
+			<ID>TH_IMPACT_CRATER_X1</ID>
+			<Text>A seed from Dark Bramble crashed here and has already taken root. Tektite wants to use a scout launcher to get a look at what's inside.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_IMPACT_CRATER_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>My signalscope picks up harmonica music when I aim it at the seed.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_IMPACT_CRATER_X3</ID>
+			<Text>I launched my Little Scout into the seed. Somehow the seed is much bigger on the inside.</Text>
+			<!-- <Text>When I launch my scout into the seed, my HUD shows two location markers: one on the seed, and one on Dark Bramble.</Text> -->
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>TH_NOMAI_MINE</ID>
+		<Name>Nomai Mines</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+
+		<RumorFact>
+			<ID>TH_NOMAI_MINE_R1</ID>
+			<SourceID>VM_VOLCANO</SourceID>
+			<Text>The Nomai were mining ore somewhere on Timber Hearth.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>TH_NOMAI_MINE_X1</ID>
+			<ClueType>TIME_LOOP</ClueType>
+			<Text>The Nomai mined ore from this site to craft a protective shell designed to physically seal off the central chamber inside Ash Twin.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_NOMAI_MINE_X2</ID>
+			<Text>Once the shell was finished, the Nomai checked to ensure there were no longer any physical entrances or cracks.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_NOMAI_MINE_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>The Nomai discovered a species of four-eyed, semi-aquatic lifeforms in the waterways near the mine.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>TH_QUANTUM_SHARD</ID>
+		<Name>Quantum Grove</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<RumorFact>
+			<ID>TH_QUANTUM_SHARD_R1</ID>
+			<RumorName>Quantum Signal</RumorName>
+			<Text>Chert detected a strange signal coming from the crater at Timber Hearth's south pole. It's very similar to the signal emitted by the Quantum Moon.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>TH_QUANTUM_SHARD_R2</ID>
+			<SourceID>BH_QUANTUM_SHARD</SourceID>
+			<RumorName>Quantum Signal</RumorName>
+			<Text>The Nomai detected a quantum signal coming from somewhere on Timber Hearth.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>TH_QUANTUM_SHARD_X1</ID>
+			<Text>There is a strange rock shard in this grove that moves when I’m not watching. It emits a signal on the Quantum Fluctuations frequency.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TH_QUANTUM_SHARD_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>I found a poem written on one of the trees in the grove.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>TH_RADIO_TOWER</ID>
+		<Name>Radio Tower</Name>
+		<Curiosity>INVISIBLE_PLANET</Curiosity>
+<!-- 
+		<RumorFact>
+			<ID>TH_RADIO_TOWER_R1</ID>
+			<Text>Gabbro was almost tempted to drop by the Timber Hearth radio tower and see a "mysterious photo" for themself.</Text>
+		</RumorFact> -->
+		<ExploreFact>
+			<ID>TH_RADIO_TOWER_X1</ID>
+			<Text>A radio tower designed to receive photos taken by the deep space satellite. There are several photos of the entire solar system hanging on the walls. Hornfels noticed something strange in one of the photos, but concluded equipment malfunction was the only sensible explanation.</Text>
+		</ExploreFact>
+<!-- 		<ExploreFact>
+			<ID>TH_RADIO_TOWER_X2</ID>
+			<Text>I found an old campsite in a grove next to the radio tower. It sounds like Hornfels was trying to doze off at the campfire to pass the time.</Text>
+		</ExploreFact> -->
+	</Entry>
+
+</AstroObjectEntry>

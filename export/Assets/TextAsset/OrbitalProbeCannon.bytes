@@ -1,0 +1,151 @@
+<AstroObjectEntry>
+	<ID>ORBITAL_PROBE_CANNON</ID>
+
+	<Entry>
+		<ID>ORBITAL_PROBE_CANNON</ID>
+		<Name>Orbital Probe Cannon</Name>
+		<Curiosity>SUNKEN_MODULE</Curiosity>
+		<IsCuriosity/>
+
+		<RumorFact>
+			<ID>ORBITAL_PROBE_CANNON_R1</ID>
+			<RumorName>Orbital Probe Cannon</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<SourceID>GD_CONSTRUCTION_YARD</SourceID>
+			<Text>The Nomai finished building the final module for the Orbital Probe Cannon and sent it into orbit around Giant’s Deep.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>ORBITAL_PROBE_CANNON_R2</ID>
+			<RumorName>Orbital Probe Cannon</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<SourceID>GD_CONSTRUCTION_YARD</SourceID>
+			<Text>I used a Nomai projection pool and saw the interior of a space station in orbit around Giant's Deep.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>ORBITAL_PROBE_CANNON_R4</ID>
+			<RumorName>Orbital Probe Cannon</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<SourceID>BH_OBSERVATORY</SourceID>
+			<Text>The Nomai decided to construct a probe cannon in orbit around Giant’s Deep.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>ORBITAL_PROBE_CANNON_R3</ID>
+			<RumorName>Orbital Flash</RumorName>
+			<RumorNamePriority>0</RumorNamePriority>
+			<SourceID>GD_GABBRO_ISLAND</SourceID>
+			<Text>Gabbro sees a bright flash in the sky at the start of every loop. Something must be happening in orbit around Giant’s Deep.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>ORBITAL_PROBE_CANNON_X1</ID>
+			<Text>The broken remains of a Nomai space station in orbit around Giant's Deep. There are three accessways branching off from the central hub area.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>ORBITAL_PROBE_CANNON_X2</ID>
+			<Text>The Orbital Probe Cannon was created to find the precise location of the Eye of the universe.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>ORBITAL_PROBE_CANNON_X3</ID>
+			<Text>The Nomai pushed the Orbital Probe Cannon above its maximum power setting to create the greatest chance of finding the Eye of the universe.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>OPC_SUNKEN_MODULE</ID>
+			<Name>Probe Tracking Module</Name>
+			<AltPhotoCondition>OPC_EYE_COORDINATES_X1</AltPhotoCondition>
+			<Curiosity>SUNKEN_MODULE</Curiosity>
+
+			<RumorFact>
+				<ID>OPC_SUNKEN_MODULE_R1</ID>
+				<Text>One of the Orbital Probe Cannon’s three modules.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>OPC_SUNKEN_MODULE_R5</ID>
+				<Text>The Probe Tracking Module is receiving data from the launched probe.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>OPC_SUNKEN_MODULE_R4</ID>
+				<Text>Any Nomai aboard the Probe Tracking Module would be the first to see the coordinates of the Eye of the universe.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>OPC_SUNKEN_MODULE_R2</ID>
+				<Text>A Nomai computer reports the Probe Tracking Module as "missing."</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>OPC_SUNKEN_MODULE_R3</ID>
+				<Text>I saw the Probe Tracking Module through a Nomai projection pool. It looks like the module is underwater. I could see purple electricity outside the viewport.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>OPC_SUNKEN_MODULE_X1</ID>
+				<Text>The Orbital Probe Cannon has launched millions of probes.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>OPC_SUNKEN_MODULE_X2</ID>
+				<Text>The 9,318,054th probe located a deep space anomaly matching all known criteria for the Eye of the universe.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>OPC_SUNKEN_MODULE_X3</ID>
+				<Text>The statue in the Probe Tracking Module automatically records each probe's trajectory and transmits the data to the Ash Twin Project.</Text>
+			</ExploreFact>
+
+			<ExploreFact>
+				<ID>OPC_EYE_COORDINATES_X1</ID>
+				<Text>I found Nomai coordinates marking the location of the Eye of the universe.</Text>
+			</ExploreFact>
+
+		</Entry>
+
+		<Entry>
+			<ID>OPC_BROKEN_MODULE</ID>
+			<Name>Launch Module</Name>
+			<Curiosity>SUNKEN_MODULE</Curiosity>
+
+			<RumorFact>
+				<ID>OPC_BROKEN_MODULE_R1</ID>
+				<Text>One of the Orbital Probe Cannon’s three modules.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>OPC_BROKEN_MODULE_R2</ID>
+				<Text>The Launch Module looks heavily damaged. There’s a huge breach in the glass viewport.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>OPC_BROKEN_MODULE_R3</ID>
+				<Text>The Launch Module's viewport window is fractured, exposing it to the vacuum of space.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>OPC_BROKEN_MODULE_X1</ID>
+				<Text>The Launch Module is badly damaged, but its projection pool is still intact.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>OPC_BROKEN_MODULE_X2</ID>
+				<Text>A Nomai named Mallow argued that it wouldn't matter if the cannon's structural integrity was compromised, since they only needed to fire the probe once.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>OPC_BROKEN_MODULE_X3</ID>
+				<Text>A Nomai named Privet countered that they wouldn't be capable of receiving the probe's data if the Probe Tracking Module was destroyed.</Text>
+			</ExploreFact>
+		</Entry>
+
+		<Entry>
+			<ID>OPC_INTACT_MODULE</ID>
+			<Name>Control Module</Name>
+			<Curiosity>SUNKEN_MODULE</Curiosity>
+
+			<RumorFact>
+				<ID>OPC_INTACT_MODULE_R1</ID>
+				<Text>One of the Orbital Probe Cannon’s three modules.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>OPC_INTACT_MODULE_X1</ID>
+				<Text>The Control Module (recently) received a request from the Ash Twin Project to launch the probe. The cannon was aligned with a randomly selected probe trajectory.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>OPC_INTACT_MODULE_X2</ID>
+				<Text>The probe was successfully launched, but the cannon's structural integrity was compromised in the process. Damage is detected in multiple modules.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+</AstroObjectEntry>

@@ -1,0 +1,10 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Of all the lifeforms who will perish in the oncoming death of the universe, we will miss the anglerfish the least.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

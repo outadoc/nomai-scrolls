@@ -1,0 +1,13 @@
+<DialogueTree>
+  <NameField>SIGN</NameField>
+  <DialogueNode>
+    <Name>Sign</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page>Charting stars again out by the radio tower — they’re so bright out here! I only wish I were able to record them faster. Admittedly, I could use more patience. I get so engrossed in my work that sunrise becomes an unwelcome deadline, and daylight a grating slog.</Page>
+      <Page>Someday, I’ll have to study the mechanics of how time manages to slow to a syrupy crawl whenever I’m anticipating something. In the meantime, I’ve turned to Gabbro, our resident expert in leisurely whiling away the hours, who recommends the following:</Page>
+      <Page>GABBRO’S 3 FOOLPROOF STEPS FOR DOZING OFF\\n     1.     Light a nice, cozy campfire and get comfortable.\\n     2.     Gaze deeply into the serene warmth.\\n     3.     Let time begin to slip away as you allow the flames to lull you into a peaceful slumber.</Page>
+      <Page>(If Gabbro knew I’d taken notes, they’d probably think I’d finally cracked, but I refuse to accept sass from an astronaut who deliberately burns their marshmallows.)</Page>
+    </Dialogue>
+  </DialogueNode>
+</DialogueTree>

@@ -1,0 +1,57 @@
+<DialogueTree>
+	<NameField>Riebeck</NameField>
+	
+	<DialogueNode>
+		<Name>WaitingForOthers</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>It’s, um, it’s not quite time yet.</Page>
+			<Page>I’m pretty sure we’ll need the others for this next part. We’ll need, you know... everyone.</Page>
+			<Page>No rush! Take your time. <![CDATA[<size=20>]]>It might not even exist here...<![CDATA[</size>]]></Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ReadyToPlay</Name>
+		<EntryCondition>AllTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>Should I begin?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes.</Text>
+				<DialogueTarget>StartPlaying</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Not yet.</Text>
+				<DialogueTarget>NotYet</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>StartPlaying</Name>
+		<Dialogue>
+			<Page>You g-got it. I’ll do my best!</Page>
+		</Dialogue>
+		<SetCondition>IsRiebeckPlaying</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotYet</Name>
+		<Dialogue>
+			<Page>Ok, I'll wait until you're ready.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Farewell</Name>
+		<EntryCondition>JamSessionIsOver</EntryCondition>
+		<Dialogue>
+			<Page>I learned a lot, by the end of everything.</Page>
+			<Page>The past is past, now, but that’s... you know, that’s okay! It’s never really gone completely. The future is always built on the past, even if we won't get to see it.</Page>
+			<Page>Still, it’s, um, time for something new, now.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

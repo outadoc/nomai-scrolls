@@ -1,0 +1,64 @@
+<AstroObjectEntry>
+	<ID>TIMBER_MOON</ID>
+
+	<Entry>
+		<ID>TM_ESKER</ID>
+		<Name>Esker’s Camp</Name>
+
+		<RumorFact>
+			<ID>TM_ESKER_R1</ID>
+			<SourceID>TH_VILLAGE</SourceID>
+			<Text>Sounds like Esker is still stationed on the Attlerock. They’ve been there by themself for a while.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>TM_ESKER_X1</ID>
+			<Text>Esker is growing a crop of trees at their camp. They seemed to be doing ok, but they’ve probably been alone on the moon for too long.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>TM_NORTH_POLE</ID>
+		<Name>Lunar Lookout</Name>
+
+		<RumorFact>
+			<ID>TM_NORTH_POLE_R1</ID>
+			<SourceID>TM_ESKER</SourceID>
+			<Text>Esker says the Attlerock’s north pole (marked in red on my minimap) is a great spot to listen for the other travelers’ music with a signalscope.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>TM_NORTH_POLE_X1</ID>
+			<Text>A lookout platform with a spectacular view of the solar system. Esker uses their signalscope here to keep tabs on the other travelers.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>TM_EYE_LOCATOR</ID>
+		<Name>Eye Signal Locator</Name>
+		<Curiosity>SUNKEN_MODULE</Curiosity>
+
+		<RumorFact>
+			<ID>TM_EYE_LOCATOR_R1</ID>
+			<SourceID>TH_VILLAGE</SourceID>
+			<RumorName>Lunar Ruins</RumorName>
+			<Text>I hear there are Nomai ruins somewhere on the Attlerock. No one knows what they are or why they were built.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>TM_EYE_LOCATOR_R2</ID>
+			<SourceID>TH_VILLAGE</SourceID>
+			<RumorName>Lunar Ruins</RumorName>
+			<Text>The Nomai text in the observatory talks about calibrating some sort of device on the Attlerock.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>TM_EYE_LOCATOR_X1</ID>
+			<Text>A Nomai device created to pinpoint the sources of distant signals.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TM_EYE_LOCATOR_X2</ID>
+			<Text>The Nomai were disappointed by their failure to detect a signal from something called the Eye of the universe.</Text>
+		</ExploreFact>
+	</Entry>
+
+</AstroObjectEntry>

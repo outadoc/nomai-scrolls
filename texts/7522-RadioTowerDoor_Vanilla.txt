@@ -1,0 +1,13 @@
+<DialogueTree>
+  <NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+   		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>CLOSED DUE TO FIRE DAMAGE</Page>
+			<Page>The old radio tower, while an important landmark, is unfortunately closed thanks to the unsanctioned flight testing of an extremely powerful model rocket.</Page>
+			<Page>While we hope to repair the radio tower in the future, all construction efforts are currently focused on the planned museum expansion at the Observatory.</Page>
+			<Page>Sincerest apologies, except to Slate and Mica,<![CDATA[\\n\\n]]>Hornfels (museum curator)</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

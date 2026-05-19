@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Credits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <m_fadeInTime>1.5</m_fadeInTime>
+    <m_fadeOutTime>1.5</m_fadeOutTime>
+    <m_ySpacing>0</m_ySpacing>
+
+    <m_pages>
+        <m_yAlign>BOTTOM</m_yAlign>
+<!--　-->
+        <m_lines m_style="Title" m_yOffset="250" m_string="Mobius Digital Games"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#      Alex Beachum#Creative Director  #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #                Game Design &amp; Programming#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# # 　　　Story Development#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#   　Kelsey Beachum#Writer              　　　　　　　　　　　　　　　　　#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #  　　　　Story Development #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#      Emily Blatnicky #3D Artist             #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #  　　　　Nomai Architecture #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# # &amp; Technology       #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#      Lanaea Bowie#Junior 3D Artist   　　　　　　　#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#         　　　　Lara Colson#Lead 3D Artist     　　　　#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #         　　　Rocks &amp; Terrain Modeling#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #　　　　　　　         Text &amp; Credits Alignment #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#　　 Satrio Dewantono#Programmer      　　　　　　　　　　#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#    　　　　Laura Herzberg#  Production Assistant　#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#       　　　　　Ian Jacobson#Concept Artist      #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #Nomai Murals      #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#        Nicholas Kim#3D Artist             #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #    Technical Art Support#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#　Eilish Lambrechtsen #　Producer             #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #   　　　　Terrain &amp; Foliage Art#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#  　　Alena Leontyeva#　　Lead 3D Artist      #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #                  　　Hearthian &amp; Nomai Architecture#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#               　　　Alice Li#   　Visual Development#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#      　　　Wesley Martin#Art Director        　　　　　　　　#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #Visual Effects       #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #User Interface Art 　　#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #       Additional 2D &amp; 3D Art　#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#             Masi Oka　　#  　　　　　Executive Producer  #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#   　　Andrew Prahlow#Composer           #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #　　Sound Effects       #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#          Kelsey Rice#Producer            　　　　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#          Adam Root　　#QA Manager       #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#         　Sarah Scialli#　Producer             #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#　      Ana Solimano#　　　　Associate Producer#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#     Avimaan Syam#　Producer             #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#    Logan Ver Hoef　　#Graphics Engineer#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# # 　　　　Game Programmer#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# # Tools Designer     　　　#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#      　Loan Verneau#Game Designer   　　#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #　Producer             #"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# # 　　　Story Development#"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#    Katherine Wang　　　#　Producer             #"/>
+        <m_lines m_style="Text" m_yOffset="30" m_string="#            　Jeffrey Yu#　Software Engineer#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# #             　User Interface Programming#"/>
+            <m_lines m_style="Text" m_yOffset="6" m_string="# # 　　　　Game Programmer#"/>
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Mobius Contractors"/>
+
+        <m_lines m_style="Text" m_yOffset="20" m_string="#       　　Rowan Cullen#Mobius Intern      　　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#       　　Chelsea Hash#Character Rigger  #"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#        　Saiful Haque#          　　　Visual Development Artist#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#      Trevor Johnson　　#Additional SFX     #"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#    　　Sebastian Kings#Concept Artist      #"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#            Ryan Neff　#           Player Character Animator#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#       Chuck Russom　　　#Sound Designer   　　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#        　　Cory Schmitz#   　　　Logo &amp; 2D UI Design#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#        James Taylor#UX Designer        　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#           　　Dan Valvo#　　　3D Character Artist#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#        　　　　Matt Whiting#Tech Support       #"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#     　Alexander Yao#  　　　　Character Animator #"/>
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Business Development"/>
+        <m_lines m_style="Heading" m_yOffset="20" m_string="The Arsenal Agency"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tina Kowalewski"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Caspar Gray"/>
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Annapurna Interactive"/>
+        <m_lines m_style="Text" m_yOffset="45" m_string="Nathan Gary"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Kelsey Hansen"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Neale Hemrajani"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Evan Icenbice"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jeff Legaspi"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Deborah Mars"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="James Masi"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jon McElroy"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Adam Root"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Joshua Sarfaty"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Nathan Vella"/>
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Third Party and Middleware"/>
+
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Unity"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Created with Unity. Portions of this program © 2005-2020 Unity Technologies."/>
+
+        <m_lines m_style="Heading" m_yOffset="70" m_string="Special Thanks to the Unity Developers and Engineers:"/>
+        <m_lines m_style="Text" m_yOffset="45" m_string="Joe Willmon#Italo Capasso"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Alexander Cardona#Gustavo Castro"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Julián Cruz#Andrew Dennison"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sergio Gomez#Juan Pablo Nieto"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Raul Oses#Jason Page"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Peter Pimley#Charles Sanglimsuwan"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Adrian Smith#Joe Stephenson"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Diki Thomas#Juan Diego Uran Correa"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Oli Williams#Anthony Yakovlev"/>
+
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Technical Support"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Big Red Button"/>
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Quality Assurance"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="HUWIZ"/>
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Localization"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Lionbridge"/>
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Additional Visual Development"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Section Studios"/>
+        <m_lines m_style="Text" m_yOffset="250" m_string="All fonts provided by Monotype under license, all rights reserved."/>
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Alpha Development Team" />
+        <m_lines m_style="Text" m_yOffset="45" m_string="#      Alex Beachum#Creator              　　　　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#         　　　Sarah Scialli#Producer            　　　　　#"/>
+
+        <m_lines m_style="Text" m_yOffset="20" m_string="#   　　Kelsey Beachum#Writer                　　　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#          Evan Sforza#Logo Designer     　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#        　　　　Sanghee Oh#UX Designer        　　#"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#   　　Andrew Prahlow#Music                 #"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="#      Trevor Johnson　　#Audio SFX           #"/>
+
+        <m_lines m_style="Heading" m_yOffset="45" m_string="Programmers"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sam Mazer#Isabella Cheng"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Aaron Henehan#Abhinav Rathod"/>
+
+        <m_lines m_style="Heading" m_yOffset="45" m_string="Designers"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Andrew Goldstein#Loan Verneau"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Bryan Zhang#Richard Emms"/>
+
+        <m_lines m_style="Heading" m_yOffset="45" m_string="Artists"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Michelle Hardy#Anya Starr"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Leslie Wenglein#Jason Knetge"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Michelle Hill#Joo Son"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Fernando Montilla#Jose Ayala"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Gabriel Cruz Vega#Jose Rodriguez"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Christian Rodriguez#Gabriel García"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Mayya Benitez#Francisco Rosario"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jesus Maddox Flores#Daniel Archilla"/>
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Fig"/>
+
+        <m_lines m_style="Heading" m_yOffset="70" m_string="Founder's Reward Tier" />
+        <m_lines m_style="Text" m_yOffset="45" m_string="Matthew Steinhauer (mattman111)"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Ben Etherington"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="QwertyuiopThePie"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jordan Frith"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tom Cummings"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sean (sharktemplar) Farrell"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Steven Ursell"/>
+
+        <m_lines m_style="Heading" m_yOffset="70" m_string="Backer Thank You"/>
+        <m_lines m_style="Text" m_yOffset="45" m_string="@k_e#◊Bobson Dugnutt◊#Aaron Grandy" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Abhinav Rathod#Adam Anderson#Adam Cardoza"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Adam Kidder#Adam Zima#Adi" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Aduard#Aki#Alan Newhouse" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Alex Kops#Alex Rigopulos#Alexa Kim" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="AlexisFR#Alon Torres#Amichai (MarmAmic) NM" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Anders Franklin#Andrea Smith#Anton Norup Sørensen" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Arlo Handley#Arnaud Bienvenu#Astrolight" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Axe Studios # Ben Etherington (Contest Winner)#Ben Johnson" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Ben Rosner#Benjamin Holmes#BigFriendlyDave" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="BinarySemaphore#Black Blade#Bob Ippolito" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Bob Marvin#Brandon Boyer#Brendan Baerwalde" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Brian and Lije Carpenter#Brian Fargo#Brian S." />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Brian Small#Bryan Edelman#Bryan Zhang" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Candi Mitchell#Capraise#Carmen Maria Marin" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Casper Wong#Charlie_Foxtrot#ChefSledg" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Chiffmonkey#Choupignougna#Chris (CDub) Williamson" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Chris Lam#Chris Vaughn#Chris W" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Christian#Christian Lau#Christoph Zürcher" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Christopher Case#ClownWhosFeelnDown#coinop" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Corey Willis#Corp chris#Cribbledirge" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Dan Ceperley#Dan Sosnowski#Daniel Guyton" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Daniel Willis#Darren Jones#David (Dudevid) Foster" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="David Gardtman#David Ginzberg#David Hicks" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="David McLaughlin#David Pittman#David Rey" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="David Russell#David Vediner#Davyn Abalone" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Dianasaurus Rex#Dolnor Numbwit#Donato Sinicco, III" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Doon#Douglas Hill#Drew Macrae" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Duncan Boehle#Duncan Sample#eddybox" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="EdEN#Edvin Jacobsson#Eivind Skogen" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Ekin#Elizabeth Lay#Elliot Trinidad" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Erik Ward#Ethan Goss and Alexander#Feargus Urquhart" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Flameofpast#Flipmode#François Blavoet" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Freeman White#Fuzzygerbil#Gabe" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Gabey#Gabriel Odorici#Gary Crook" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Gary J.#George Zackrison#Gerco Dries" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Gibberstein#Gina Ramirez#Giulio Harding" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Giuseppe Giambanco#Glen Holdampf#Grant Volker" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Hilma Rowe Martin#His Nibs, Duncan of Retriver#hujgup" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="hwmrocker#icotom#Ilya Shereshevsky" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Ingy Syam#isrever#J. Todd Coleman" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jack Pritz#James L Martin#Jared Mills" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jasmine Choinski#Jason (Zelkian) Doll#jason gessner" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jason Mathias#jcgswims#Jeff Dixon" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jeffrey Guarnieri#Jennifer McMurray#Jennifer Sheu" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jesse Mills#jfis#Jim Redner" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="João Menezes Morais#Joel (Moleculor) King#John (Zombie John) Nelson" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="John Robertson#Jon Beyer#Jon Gill" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jon Moore#Jon Zorita Leza#Jonathan Chan" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jordan Frith#Jordan Vance#Jörn Huxhorn" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Joseph Pease#Josh Scherr#Jud Bumpas" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="June Tate-Gans#Justin Bailey#Justin Beebe" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Kalloreinder#Kelsey T. Jones#Ken Hipple" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Keri Bailey#Kethro#Kev Moore" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Kevin Glover#Kevin Lingerfelt#Khahil (heels) White" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Kris Coleman#Kyano#Kyle Radue" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Lairdo#Lani Aung#Laredo Cornelius sudo rm -rf" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Lars Westergren#Lenurd#Leslie L" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Lori Schroeder#Lorne Lanning#Luigifan2004" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Luke Iannini#MacLøød#majestic" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Malvasius#Marc Hellwig#Markus Pointner" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Marshall Todd Mabie#Mastercylinder#Matthew LePain" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Matthew Steinhauer (mattman111)#MattShea#Max Nilsson" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Mell#Metz#Michael - Radiotype" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Michael Annetta#Michael Crosgrey#Michael Ferstenfeld" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Michael Kuroda#Michael Neylon#Michelle Hill" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Michelle Hill and Graham Wong#Mike Carmody#Mike Maurer" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Mike Shaver#Mikhail Schelkunov#Mikiko Matsunaga" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Mikkel Dockweiler Sørensen#Miles and Rhys#MNINE" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="MrBungler#MW#Nabeel Hyatt" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Nathan Leask#Neuro122 {VR}#Nick Covey" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Nik Gustavson-Falck#Ohad Kanne#Oliver Barlow" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Owen Hughes#Patrick King#Pauline Middelink" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Pax The Sublime#PennePenney#Per Kristian Brastad" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Peter Brinson#Peter Silk#Philip Schoemig" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Philip Simonsen#PionFour#Prince Galidor" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Rachel#Randy “Randygbk” Greenback#Ray Crook" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Red Thomas#Reid Sawtell#Rob Dubbin" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Rockotodd#RongoTheBold#rottendoubt" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Ryan Cramer#Ryan Evans#Ryxtan" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sam Gawith#Sam Hughes#samlii" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Samuel Bancroft#Scott Manley#Scott Pease" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Scott R.#Sean 'Ariamaki' Riedinger#Sean (sharktemplar) Farrell" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Seanny the J Flyy#Sébastien Delahaye#Seth Maset" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sharundaar#Shavenewok#Shawn Adams" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sheila Porter#Sheridan W. Layman II#Simon Dampier" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sirkku Kojola#Slimline#Steinbrew" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sten Darker#Steph Bates#Stephan Vladimir Bugaj" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Stephen Emerick#Sterling Olson#Steve and Janet Beachum" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Steve R#Steven Newcomb#Suddle D" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sunil#SuperTekCop#Sven 'Spartan190' Steinbach" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tandalus#Tangentric#ThatGuyBob" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Thomas Crescen Constant#Tim (TheWizard) Harris#Tim L" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tim Mahrt#Tim Schafer#Tobias (Corben) Krummen" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tom#Tom C#Tom Grinnell" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tomas Quintana#ToraTiger#Torbjørn Grønnevik Dahle" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Torsten Marek#Tory Republic#Tracy Fullerton" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tristan Chester#Troy (Wrongtown) Hall#Tucker" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tzepesh#Vann#VenerableMonster" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Victor Romero#Vincent Mazza#Vintron" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Waning Gibbous Games#Will Stevens#xMADMARDIGANx" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Yann R. Fernandez#Zachary H.#Zanderfax" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Zophar73#James Currie#" />
+
+        <m_lines m_style="Title" m_yOffset="250" m_string="Special Thanks"/>
+
+        <m_lines m_style="Heading" m_yOffset="70" m_string="Playtesters" />
+        <m_lines m_style="Text" m_yOffset="45" m_string="Michelle Bol#Kittrell Boyd"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Eric Butler#Austin Drexler"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Philip Eberhart#Jake Hoffman"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Desirée Karlsson#Mitchell Loofbourrow"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sam Mazer#Coby Moran"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Casey Sakima#Zach R. D."/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Debra Skinner#Shaka Smith"/>
+
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Thesis Advisors" />
+        <m_lines m_style="Text" m_yOffset="20" m_string="Peter Brinson"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jeremy Gibson"/>
+
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Annapurna Interactive Special Thanks" />
+        <m_lines m_style="Text" m_yOffset="45" m_string="Megan Ellison"/>
+        <m_lines m_style="Text" m_yOffset="45" m_string="Jordan Marks"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sam Kim"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Tim Koh"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Cornelis van Dijkhuizen, Caleb Bardgett, and Jason Paul"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Everyone at Annapurna"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Jon Gibson, Amanda White and everyone at iam8bit"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Sibel Sunar, Laura Weir, Mari Garcia, Janelle Grai, Sarah Rudney, Dillon Arace and everyone at fortyseven communications"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Adam thanks: Garry, Sue, Lindsey, Sam, Adam, Heidi, Paul, Odie, Steph and Street Fight Radio."/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Alisa Faber"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Brian Silva"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Shawne Benson"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Julio Perez"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="John Vega"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Matthew Sparks"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Andy Eddy"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Alvin Smajic"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="Akiko Goshi"/>
+        <m_lines m_style="Text" m_yOffset="20" m_string="All of our playtesters"/>
+
+        <m_lines m_style="Heading" m_yOffset="250" m_string="Mobius Special Thanks" />
+        <m_lines m_style="Text" m_yOffset="45" m_string="Bread Lounge, Pizzanista, Blue Star" />
+        <m_lines m_style="Text" m_yOffset="40" m_string="~In loving memory of the American Tea Room~" />
+        <m_lines m_style="Text" m_yOffset="40" m_string="Alex thanks: Peter Brinson, David Pierce, Loan Verneau, and Tracy Fullerton (wisdom), Masi Oka and everyone at Mobius (power), Janet, Steve, Kelsey, and Erin Beachum (courage)"/>
+        <m_lines m_style="Text" m_yOffset="40" m_string="Loan thanks: ma famille, la meilleure au monde parce que j'ai eut la chance de la choisir: Ylian, Anna, Michel, Valérie, Billy S., Sèv, Sarken, Justine, Damien, Alex et bien entendu Super Moine." />
+        <m_lines m_style="Text" m_yOffset="40" m_string="Wesley thanks: Hilma, James, Michael and Philip Martin, Michelle Bol, Mitchell Loofbourrow, Sandy Appleoff, The Elsinore Team."/>
+        <m_lines m_style="Text" m_yOffset="40" m_string="Logan thanks: My parents, Ansel, and Jason; Alex Mathew and Jacob Pernell; Jeremy Gibson and Tracy Fullerton;"/>
+        <m_lines m_style="Text" m_yOffset="10" m_string="and Alex Beachum, Loan Verneau, and Avimaan Syam for pulling me aboard a train I thought I'd missed." />
+        <m_lines m_style="Text" m_yOffset="40" m_string="Jeffrey thanks: My family, especially my sister Kathryn"/>
+        <m_lines m_style="Text" m_yOffset="40" m_string="Lara thanks: Nora, Brian, and Shawn" />
+        <m_lines m_style="Text" m_yOffset="40" m_string="Eilish thanks: Mum and Pop, the +1, and Emily." />
+        <m_lines m_style="Text" m_yOffset="40" m_string="Ian thanks: Mom and Dad, the rest of the fam, the homies."/>
+        <m_lines m_style="Text" m_yOffset="40" m_string="Kelsey thanks: Jon Moore, Erin Beachum, Alex and Loan (you lunatics), Steve and Janet Beachum, and every last one of you who rooted for us to pull this off."/>
+
+
+        <m_lines m_style="Text" m_yOffset="100" m_string="© 2019-2020 Mobius Digital, LLC" />
+        <m_lines m_style="Text" m_yOffset="10" m_string="Published by Annapurna Interactive under exclusive license."/>
+        <m_lines m_style="Text" m_yOffset="10" m_string="All rights reserved."/>
+
+        <m_lines m_style="Title" m_yOffset="500" m_string="Thank you for playing Outer Wilds!" />
+
+        <m_scrollSpeed>200</m_scrollSpeed>
+        <m_displayTime>0</m_displayTime>
+    </m_pages>
+
+</Credits>

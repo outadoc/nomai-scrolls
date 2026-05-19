@@ -1,0 +1,35 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>IPNotFound</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>The radio tower on Timber Hearth was built to receive transmissions from our deep space satellite, and housed some of the last-ever photos taken of the entire solar system.</Page>
+			<Page>Hornfels noticed a curious anomaly in one of the photos, but it ultimately went unexplained.</Page>
+		</Dialogue>
+	</DialogueNode>
+	<DialogueNode>
+		<Name>IPFound</Name>
+		<EntryCondition>EnteredIP</EntryCondition>
+		<Dialogue>
+			<Page>The radio tower on Timber Hearth was built to receive transmissions from our deep space satellite, and housed some of the last-ever photos taken of the entire solar system.</Page>
+			<Page>One of these photos revealed the existence of an invisible ring world inhabited by a species whose presence in our solar system predated even the Nomai.</Page>
+		</Dialogue>
+		<DialogueTargetShipLogCondition>IP_DREAM_2_STORY_X2</DialogueTargetShipLogCondition>
+		<DialogueTarget>IPDreamLibrariesFound</DialogueTarget>
+	</DialogueNode>
+	<DialogueNode>
+		<Name>IPDreamLibrariesFound</Name>
+		<Dialogue>
+			<Page>This species traveled from a nearby star system in search of the Eye of the universe, but, horrified by what they discovered, decided to block the Eye’s signal so that no one else would ever find it.</Page>
+		</Dialogue>
+		<DialogueTargetShipLogCondition>IP_SARCOPHAGUS_X3</DialogueTargetShipLogCondition>
+		<DialogueTarget>IPFinished</DialogueTarget>
+	</DialogueNode>
+	<DialogueNode>
+		<Name>IPFinished</Name>
+		<Dialogue>
+			<Page>One individual, however, rebelled against the decision, and was able to briefly release the Eye’s signal back into space before being caught and imprisoned in solitude for this betrayal.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

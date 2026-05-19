@@ -1,0 +1,177 @@
+<DialogueTree>
+	<NameField>Hal</NameField>
+	
+	<DialogueNode>
+		<Name>Friend1</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Hey, hey! So did you get a good look at that Nomai statue?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+      <DialogueOption>
+        <Text>The statue looked at me and opened its eyes!</Text>
+        <DialogueTarget>Friend3</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+				<Text>The statue was glowing! Why was it glowing?!</Text>
+				<DialogueTarget>Friend3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+		<SetCondition>FriendSaysHiAgain</SetCondition>
+    <SetCondition>HornfelsStatueEyes</SetCondition>
+	</DialogueNode>
+
+<!--   <DialogueNode>
+    <Name>Friend2</Name>
+    <Dialogue>
+      <Page>It opened its eyes? Really? I didn’t know it could do that!</Page>
+      <Page>What do you think it means that the eyes are open? Hornfels told me the eyes wouldn’t open before. Did something change? Maybe the statue is doing something now?</Page>
+      <Page>Oh wow, speaking of Hornfels — they’re going to be <i>crazy</i> excited when they hear about this.</Page>
+    </Dialogue>
+    <DialogueTarget>PostConvoMenu</DialogueTarget>
+  </DialogueNode> -->
+
+  <DialogueNode>
+    <Name>Friend3</Name>
+    <Dialogue>
+			<Page>Whoa, whoa — the statue was doing <![CDATA[<i>]]>what<![CDATA[</i>]]>?</Page>
+      <Page>So its eyes opened, and then you saw images from your own memories and glowing lights flying around? You mean like <![CDATA[<Pause/>]]> a hallucination?</Page>
+			<Page>Listen, no offense, but... are you sure you’re okay to launch? Like, medically speaking?</Page>
+		</Dialogue>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>You know what, don’t worry about it.</Text>
+        <DialogueTarget>Friend4</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>No, that statue is <![CDATA[<i>]]>definitely weird<![CDATA[</i>]]>.</Text>
+        <DialogueTarget>Friend5</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Friend4</Name>
+    <Dialogue>
+      <Page>Maybe you should sit down for a bit and take it easy. I’d hate for anything bad to happen if you tried to launch while you’re not feeling great.</Page>
+      <Page>But hey, when you <![CDATA[<i>]]>are<![CDATA[</i>]]> ready, then you can make the most of our translator tool! <![CDATA[<color=grey>Sniff...</color>]]> <![CDATA[<Pause/>]]> I can’t believe it’s all grown up and leaving for space already.</Page>
+      <Page>For real, though, I’m glad you’re the one carrying it and not, like, Riebeck. They’d fall on it for sure.</Page>
+      <Page>Say, if you want to do a short trip to just get your space legs under you, you could check out the ruins on the Attlerock! I’d love to learn what those are.</Page>
+    </Dialogue>
+    <RevealFacts><FactID>TM_EYE_LOCATOR_R1</FactID></RevealFacts>
+    <DialogueTarget>Friend6</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Friend5</Name>
+    <Dialogue>
+      <Page>I mean, if you’re saying it happened, then... I guess maybe it did. But why?</Page>
+      <Page>Hornfels tried everything to get the statue’s eyes to open, and nothing like this ever happened to them.</Page>
+      <Page>I don’t think you’re going to get any answers from the museum statue, but Gabbro said they were going back to Giant’s Deep. Dunno which island they’re on, though.</Page>
+      <Page>Maybe they’d be able to tell you more? On the other hand, Gabbro’s, y’know, <![CDATA[<i>]]>Gabbro<![CDATA[</i>]]>, so maybe you’d be better off searching for more info on your own.</Page>
+      <Page>...Geez, now I’m <![CDATA[<i>]]>really<![CDATA[</i>]]> jealous you’re going into space! Hey, see if you can use our translator tool to find out more about the statue, okay?</Page>
+    </Dialogue>
+    <RevealFacts><FactID>GD_GABBRO_ISLAND_R1</FactID><FactID>TH_VILLAGE_X3</FactID></RevealFacts>
+    <SetPersistentCondition>FromGiantsDeep</SetPersistentCondition>
+    <DialogueTarget>Friend6</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>Friend6</Name>
+    <Dialogue>
+      <Page>Good luck, and safe flying!</Page>
+    </Dialogue>
+  </DialogueNode>
+
+	<DialogueNode>
+		<Name>PostConvo1</Name>
+    <Dialogue>
+      <Page>Hey again!</Page>
+    </Dialogue>
+    <DialogueTarget>PostConvoMenu</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>PostConvoMenu</Name>
+		<EntryCondition>FriendSaysHiAgain</EntryCondition>
+		<Dialogue>
+			<Page>Was there something else?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+      <DialogueOption>
+        <Text>Where on Giant’s Deep would I find Gabbro?</Text>
+        <DialogueTarget>WheresGabbro_Outside</DialogueTarget>
+        <RequiredPersistentCondition>FromGiantsDeep</RequiredPersistentCondition>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Where’s the Nomai statue in the museum from?</Text>
+        <DialogueTarget>PostConvo2</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Why did the Nomai make that statue?</Text>
+        <DialogueTarget>PostConvo3</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Wonder if I’ll discover anything cool in space.</Text>
+        <DialogueTarget>PostConvo4</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>See you later.</Text>
+        <DialogueTarget>PostConvoEnd</DialogueTarget>
+      </DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+  <DialogueNode>
+    <Name>WheresGabbro_Outside</Name>
+    <Dialogue>
+      <Page>Gabbro said they were going back to Giant’s Deep to wherever they found that Nomai statue. One of the islands, I think.</Page>
+      <Page>You remember Gabbro plays a flute, right? Like, all the time? I bet your signalscope could find them easily.</Page>
+      <Page>If you do see Gabbro, say hi for me!</Page>
+    </Dialogue>
+    <RevealFacts><FactID>GD_GABBRO_ISLAND_R1</FactID></RevealFacts>
+  </DialogueNode>
+  
+  <DialogueNode>
+    <Name>PostConvo2</Name>
+    <Dialogue>
+      <Page>From Giant’s Deep! Gabbro fished it out of the oceans and brought it back here for study.</Page>
+      <Page>
+        Hornfels doesn’t know much about it yet, just that it’s <![CDATA[<i>]]>crazy<![CDATA[</i>]]> old and super tough. I wonder why the Nomai carved it?
+      </Page>
+      <Page>Apparently, Gabbro went back to Giant’s Deep to try to learn more about the statue. Maybe they’ll find some answers there.</Page>
+    </Dialogue>
+    <RevealFacts><FactID>GD_GABBRO_ISLAND_R1</FactID></RevealFacts>
+    <SetPersistentCondition>FromGiantsDeep</SetPersistentCondition>
+    <DialogueTarget>PostConvoMenu</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>PostConvo3</Name>
+    <Dialogue>
+      <Page>Good question! You know how Gabbro knocked a fragment off the statue while they were hauling it back from Giant's Deep?</Page>
+      <Page>Hornfels analyzed the fragment and figured out the stone it's made from can store information — I heard Slate ended up repurposing it for your ship’s computer.</Page>
+      <Page>I’m not sure what the statue opening its eyes has to do with anything, but maybe the statue was made for storing information, too?</Page>
+    </Dialogue>
+      <RevealFacts><FactID>GD_GABBRO_ISLAND_R1</FactID></RevealFacts>
+    <SetPersistentCondition>FromGiantsDeep</SetPersistentCondition>
+    <DialogueTarget>PostConvoMenu</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>PostConvo4</Name>
+    <Dialogue>
+      <Page>Hey, you never know — maybe you’ll be the one to uncover the Nomai’s mysteries!</Page>
+      <Page>Or maybe you’ll discover a new kind of rock or something.</Page>
+      <Page>But honestly, as long as they don’t end up naming new safety equipment after you, I’m sure you’ll have done a great job.</Page>
+    </Dialogue>
+  </DialogueNode>      
+  
+	<DialogueNode>
+		<Name>PostConvoEnd</Name>
+		<Dialogue>
+			<Page>Be careful out there in space!</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

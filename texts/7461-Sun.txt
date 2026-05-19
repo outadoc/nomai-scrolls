@@ -1,0 +1,44 @@
+<AstroObjectEntry>
+	<ID>SUN_STATION</ID>
+
+	<Entry>
+		<ID>S_SUNSTATION</ID>
+		<Name>Sun Station</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+
+		<RumorFact>
+			<ID>S_SUNSTATION_R1</ID>
+			<SourceID>CT_SUNLESS_CITY</SourceID>
+			<Text>There is a way to safely travel to the Sun Station from Ash Twin.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>S_SUNSTATION_R2</ID>
+			<SourceID>CT_SUNLESS_CITY</SourceID>
+			<Text>The Nomai debated building a Sun Station in order to power the Ash Twin Project.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>S_SUNSTATION_R3</ID>
+			<SourceID>TT_WARP_TOWERS</SourceID>
+			<Text>The Nomai built something called the Sun Station, but not everyone supported its construction.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>S_SUNSTATION_X1</ID>
+			<Text>The Sun Station was designed to make the sun go supernova.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>S_SUNSTATION_X2</ID>
+			<Text>The Nomai fired the Sun Station but it had no effect on the sun. They concluded that the Sun Station could never cause the sun to go supernova.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>S_SUNSTATION_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>After the failure of the Sun Station, the Nomai took a break to investigate the newly arrived comet.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>S_SUNSTATION_X4</ID>
+			<Text>According to a Nomai computer, our sun has reached the end of its natural life cycle.</Text>
+		</ExploreFact>
+	</Entry>	
+
+</AstroObjectEntry>

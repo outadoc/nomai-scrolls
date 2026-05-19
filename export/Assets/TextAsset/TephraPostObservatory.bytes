@@ -1,0 +1,86 @@
+<DialogueTree>
+	<NameField>Tephra</NameField>
+
+	<DialogueNode>
+		<Name>ShyKidB1</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Hullo, astronaut! Are you going into space today?</Page>			
+			<Page>Are you going into space and never coming back like Feldspar did?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>...What?</Text>
+				<DialogueTarget>What</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Don’t worry, I’ll come back.</Text>
+				<DialogueTarget>Comeback</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>That’s pretty disturbing.</Text>
+				<DialogueTarget>Disturbing</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+		<SetCondition>TalkedToWeirdKid</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>What</Name>
+		<Dialogue>
+			<Page>Yeah, um, Hornfels says Feldspar went away into space and didn’t come back. Hornfels says Feldspar was the best pilot ever, but no one knows what happened to them.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Hornfels probably shouldn’t be telling you stuff like this.</Text>
+				<DialogueTarget>Hornfels</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>That’s not something I want to think about right now.</Text>
+				<DialogueTarget>NotThinkAboutThat</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Hornfels</Name>
+		<Dialogue>
+			<Page>Hornfels says that, too.</Page>
+		</Dialogue>
+		<DialogueTarget>NotThinkAboutThat</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotThinkAboutThat</Name>
+		<Dialogue>
+			<Page>But if Feldspar disappeared, you might disappear, too, right?</Page>
+			<Page>You’re not as good as Feldspar, so you should be really careful not to get lost.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Comeback</Name>
+		<Dialogue>
+			<Page>That’s what Feldspar said, too, but they never did.</Page>
+			<Page>Hornfels will be really sad if you don’t come back, like how sad it makes them to talk about Feldspar. So you should make sure you don’t get lost in space, too.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Disturbing</Name>
+		<Dialogue>
+			<Page>But Hornfels says no one knows what happened to Feldspar. Hornfels says they got lost in space even though they were the best pilot ever.</Page>
+			<Page>You’re not as good as Feldspar, so you should be really careful not to get lost.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>MallowTalk</Name>
+		<EntryCondition>TalkedToWeirdKid</EntryCondition>
+		<Dialogue>
+			<Page>Hullo, astronaut!</Page>
+			<Page>Are you bringing lots of mallows with you to roast on your trip? Mallows are my favorite!</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

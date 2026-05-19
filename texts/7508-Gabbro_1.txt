@@ -1,0 +1,548 @@
+<!--
+Seen if player meets Gabbro on LOOP 1
+
+PLAYER LEARNS ABOUT: memory statues
+-->
+
+<DialogueTree>
+	<NameField>Gabbro</NameField>
+
+	<DialogueNode>
+		<Name>MeetGabbro</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>
+				Nice, it’s you. Good to see you made it here in one piece. The first solo launch is a doozy, isn’t it?
+			</Page>
+			<Page>
+				So hey, don’t laugh, but I think I might have had some kind of spiritual experience with a rock shaped like a face.
+			</Page>
+		</Dialogue>
+		<RevealFacts><FactID>GD_GABBRO_ISLAND_X0</FactID></RevealFacts>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>...What?</Text>
+				<DialogueTarget>Explanation1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Me too!</Text>
+				<DialogueTarget>Explanation2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+	
+	<DialogueNode>
+		<Name>Explanation1</Name>
+		<Dialogue>
+			<Page>
+				One of the islands on Giant’s Deep has a Nomai statue on the beach - ever seen one? I brought one back to Timber Hearth with me. Big stone sculpture of a Nomai’s head, three eyes and everything. Beautifully carved, too.
+			</Page>
+			<Page>
+				So one minute I’m standing on an island looking at a Nomai sculpture on the beach, and the next thing I know, it’s looking back at me, glowing.
+			</Page>
+			<Page>
+				The sculpture replays everything I’ve just done, like it’s been watching me through my own eyes, you know? And then suddenly it stops and everything’s normal again.
+			</Page>
+		</Dialogue>
+		<RevealFacts>
+			<FactID>GD_STATUE_ISLAND_R1</FactID>
+			<FactID>GD_GABBRO_ISLAND_X1</FactID>
+		</RevealFacts>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>That happened to me at the observatory.</Text>
+				<DialogueTarget>YouTooHuh</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>YouTooHuh</Name>
+		<Dialogue>
+			<Page>
+				You too, huh?
+			</Page>
+		</Dialogue>
+		<DialogueTarget>ExplanationMerge</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Explanation2</Name>
+		<Dialogue>
+			<Page>
+				You’re saying the statue I brought to the museum started glowing at you? Yeah, sounds about right.
+			</Page>
+			<Page>
+				One minute I’m standing on an island looking at a Nomai sculpture on the beach, and the next thing I know, it’s looking back at me, glowing.
+			</Page>
+			<Page>
+				It replays everything I’ve just done, like it’s been watching me through my own eyes, you know? And then suddenly it stops and everything’s normal again.
+			</Page>
+		</Dialogue>
+		<RevealFacts>
+			<FactID>GD_STATUE_ISLAND_R1</FactID>
+			<FactID>GD_GABBRO_ISLAND_X1</FactID>
+		</RevealFacts>
+		<DialogueTarget>ExplanationMerge</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ExplanationMerge</Name>
+		<Dialogue>
+			<Page>
+				It didn’t seem bad, just... weird? Were we the only ones who saw that happen?
+			</Page>
+			<Page>
+				I tried radioing Hornfels and asking them about it, but they told me I must have just nodded off out here and gotten confused.
+			</Page>
+			<Page>
+				Then we talked about dreams until Hornfels told me to go refill my oxygen tank before I talked myself to death.
+			</Page>
+			<Page>So that’s what’s new with me. But hey, this is your first solo voyage! Let’s talk about you, you know?</Page>
+		</Dialogue>
+		<SetPersistentCondition>MetGabbro_Loop1</SetPersistentCondition>
+		<SetCondition>SaidHiToGabbro</SetCondition>
+		<DialogueTarget>GabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Gabbro1_saidhi</Name>
+		<EntryCondition>SaidHiToGabbro</EntryCondition>
+		<Dialogue>
+			<Page>
+				Have you ever stared at a cyclone for so long, it started to hypnotize you? I’m telling you, they’ll pull you into a trance if you look at ’em long enough.
+			</Page>
+		</Dialogue>
+		<DialogueTarget>GabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>GabbroMenu</Name>
+		<Dialogue>
+			<Page>How’s space treating you?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>What are you doing out here?</Text>
+				<DialogueTarget>WhatAreYouDoing</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Where should I explore on Giant’s Deep?</Text>
+				<DialogueTarget>WhereToExplore</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>What’s up with this planet?</Text>
+				<DialogueTarget>ThisPlanet</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<CancelledPersistentCondition>AskedGabbroForHisShip</CancelledPersistentCondition>
+				<CancelledPersistentCondition>FoundGabbroShip</CancelledPersistentCondition>
+				<Text>Where’s your ship?</Text>
+				<DialogueTarget>GabbrosShip</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>AskedGabbroForHisShip</RequiredPersistentCondition>
+				<CancelledPersistentCondition>FoundGabbroShip</CancelledPersistentCondition>
+				<Text>Where’s your ship?</Text>
+				<DialogueTarget>GabbrosShip2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>FoundGabbroShip</RequiredPersistentCondition>
+				<CancelledPersistentCondition>ToldGabbroAboutHisShip</CancelledPersistentCondition>
+				<Text>I found your ship!</Text>
+				<DialogueTarget>GabbrosShip3</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>FoundGabbroShip</RequiredPersistentCondition>
+				<RequiredPersistentCondition>ToldGabbroAboutHisShip</RequiredPersistentCondition>
+				<CancelledCondition>ToldGabbroAboutHisShipThisLoop</CancelledCondition>
+				<Text>I saw your ship again.</Text>
+				<DialogueTarget>GabbrosShip4</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredLogCondition>TH_RADIO_TOWER_X1</RequiredLogCondition>
+				<CancelledPersistentCondition>AskedGabbroAboutRadioTower</CancelledPersistentCondition>
+				<Text>I found a photo of you inside the old radio tower.</Text>
+				<DialogueTarget>FoundSomething6Base</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredLogCondition>TH_RADIO_TOWER_X1</RequiredLogCondition>
+				<RequiredPersistentCondition>AskedGabbroAboutRadioTower</RequiredPersistentCondition>
+				<Text>I found a photo of you inside the old radio tower.</Text>
+				<DialogueTarget>FoundSomething6Again</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>See you later.</Text>
+				<DialogueTarget>Goodbye</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WhatAreYouDoing</Name>
+		<Dialogue>
+			<Page>Well, what are any of us doing here, really?</Page>
+			<Page>...Nah, I’m just kidding. I’m out here exploring our solar system, same as you.</Page>
+			<Page>But I tell you what, outer space really gives you room to think. It’s quiet and peaceful out here.</Page>
+			<Page>I mean, it’s usually quiet and peaceful. Sometimes a cyclone comes by and lifts my little island paradise clean out of the water. Then: less peaceful.</Page>
+		</Dialogue>
+		<DialogueTarget>GabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WhereToExplore</Name>
+		<Dialogue>
+			<Page>Here’s something you might like — I saw a bright flash in the sky not too long ago. Something must have happened up there in orbit around the planet.</Page>
+			<Page>What else, what else... Have you been to Statue Island? That’s what I’ve been calling it, seeing as it’s the <![CDATA[<i>island</i>]]> where I found the glowing Nomai <![CDATA[<i>statue</i>]]>.<![CDATA[<Pause>]]> ...Get it?</Page>
+			<Page>I was on the beach on Statue Island when the whole glowy business happened, by the way. It’s a nice beach for that kind of thing. I give it a solid 7 out of 10 on the Gabbro Relaxation Scale.</Page>
+			<Page>If you feel like checking out Statue Island, it’s the one with two islands connected by a natural rock arch. Well... mostly connected, anyway. You’ll see.</Page>
+		</Dialogue>
+		<RevealFacts>
+			<FactID>GD_STATUE_ISLAND_R1</FactID>
+			<FactID>GD_STATUE_ISLAND_R2</FactID>
+		</RevealFacts>
+		<DialogueTarget>GabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ThisPlanet</Name>
+		<Dialogue>
+			<Page>Haha, I know, right?</Page>
+			<Page>...Oh, you meant, like, tell you more about it? I gotcha. Well, Giant’s Deep is massive, and mostly water. No surprises there.</Page>
+			<Page>There’s a strong current a ways beneath the surface that prevents anything from sinking below it. Seriously, I tried everything I could think of to get past that current, and neither idea worked.</Page>
+			<Page>As for land masses, I’ve counted four islands, including this one. There’s also the one with that Nomai statue I saw on the beach.</Page>
+			<Page>You’ve seen the cyclones? Yeah, they’re hard to miss. They’ll toss up everything in their path, islands included. Little tip — if you get picked up, try to land in water. Less likely to kill you.</Page>
+		</Dialogue>
+		<RevealFacts><FactID>GD_OCEAN_R1</FactID></RevealFacts>
+		<DialogueTarget>GabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>GabbrosShip</Name>
+		<Dialogue>
+			<Page>That’s a good question.</Page>
+			<Page>It’s definitely on this planet <![CDATA[<i>]]>some<![CDATA[</i>]]>where. I mean, unless a cyclone came by and tossed it into space, I guess. Heh, that would be pretty nuts.</Page>
+			<Page>I hope it’s not lonely.</Page>
+		</Dialogue>
+		<SetPersistentCondition>AskedGabbroForHisShip</SetPersistentCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>GabbrosShip2</Name>
+		<Dialogue>
+			<Page>An excellent question. I haven’t seen it around lately.</Page>
+			<Page>I hope it’s not lonely.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>GabbrosShip3</Name>
+		<Dialogue>
+			<Page>Oh, cool. So it’s floating in the ocean, huh?</Page>
+			<Page>Did it look like it was having a good time?</Page>
+		</Dialogue>
+		<SetPersistentCondition>ToldGabbroAboutHisShip</SetPersistentCondition>
+		<SetCondition>ToldGabbroAboutHisShipThisLoop</SetCondition>
+	</DialogueNode>
+	
+	<DialogueNode>
+		<Name>GabbrosShip4</Name>
+		<Dialogue>
+			<Page>I hope it’s having fun! Did you say hi for me?</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Goodbye</Name>
+		<Dialogue>
+			<Page>Cool, cool. Take it easy out there.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething6Again</Name>
+		<Dialogue>
+			<Page>Yeah, you mentioned that before. Did I look busy in it? I hope I looked busy.</Page>
+		</Dialogue>
+		<DialogueTarget>FoundSomething6</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething6Base</Name>
+		<Dialogue>
+			<Page>Nice. Did I look busy in it? I hope I looked busy.</Page>
+		</Dialogue>
+		<SetPersistentCondition>AskedGabbroAboutRadioTower</SetPersistentCondition>
+		<DialogueTarget>FoundSomething6</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething6</Name>
+		<Dialogue>
+			<Page>Must have been from the time Hornfels sent me to check on the deep space satellite. They thought Ol’ Spacey might be malfunctioning, but I couldn’t find a single thing wrong with it.</Page>
+			<Page>Which is probably how it got a shot of my beautiful be-helmeted face, come to think of it.</Page>
+			<Page>I always thought it was kinda sweet that the best way to find Ol’ Spacey is to use a map that’s generated by the satellite itself, isn’t it? Like it’s inviting us to visit. Good ol’ deep space satellite, always making sure we know where we’re going.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Why’d Hornfels think it was broken?</Text>
+				<DialogueTarget>FoundSomething6a</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Um. “Ol’ Spacey”?</Text>
+				<DialogueTarget>FoundSomething6b</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>I have a map?!</Text>
+				<DialogueTarget>FoundSomething6c</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething6a</Name>
+		<Dialogue>
+			<Page>Dunno. Hornfels probably told me why, but Hornfels tells me lots of things, and sometimes I tune out. Or pretend there’s signal interference and I can’t hear them.</Page>
+			<Page>Best guess says the deep space satellite must have sent Timber Hearth some weird pictures, but like… what’s considered “weird” for a satellite, you know?</Page>
+			<Page>Anyway, if you ever want to visit Ol’ Spacey, fastest way is to jump into your ship and use your solar system map to lock on to the satellite, same as you would any astral body.</Page>
+		</Dialogue>
+		<SetCondition>MAP_PROMPT_REMINDER</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething6b</Name>
+		<Dialogue>
+			<Page>I mean, the satellite’s not <![CDATA[<i>]]>super<![CDATA[</i>]]> old, but it’s hardly brand-new. “Ol’” is more a term of affection. ...You’re being very literal-minded about this.</Page>
+			<Page>Ol’ Spacey likes visitors, you know! Fastest way to find it is to jump into your ship and use your solar system map to lock on to our faithful satellite friend, same as you would any astral body.</Page>
+		</Dialogue>
+		<SetCondition>MAP_PROMPT_REMINDER</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething6c</Name>
+		<Dialogue>
+			<Page>Yeah, um, the one that’s standard with all our spacesuits? The one you have with you at all times that opens with the press of a button? …That map?</Page>
+			<Page>You didn’t get conked on the head by a rock or a meteorite or something on your way here, did you? No shame in that. Happens to me all the time!</Page>
+			<Page>In case you were hit especially hard, don’t forget that you can jump into your ship and use your solar system map to lock on to any astral body. It’s the easiest way to visit Ol’ Spacey, too.</Page>
+		</Dialogue>
+		<SetCondition>MAP_PROMPT_ATTENTION</SetCondition>
+	</DialogueNode>
+
+</DialogueTree>
+
+
+<!--
+
+	<DialogueNode>
+		<Name>MetGabbroFirstLoop_LoopGOE3</Name>
+
+		<Dialogue>
+			<Page>I was hoping you’d be back. Don’t freak out or anything, but I think we might be stuck in a time loop.</Page>
+		</Dialogue>
+		<DialogueOptionList>
+			<DialogueOption>
+				<Text>Seems to be the case.</Text>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>I KNEW it!</Text>
+			</DialogueOption>
+		</DialogueOptionList>
+		<Dialogue>
+			<Page>Cool, you’re taking this pretty well.</Page>
+			<Page>See, I was sitting on this island after you left, thinking about what happened, when the sky suddenly goes all bright. Brighter and brighter, until I can’t see anything at all. Then I open my eyes...</Page>
+			<Page>And I’m right back here. Bright light is gone, everything’s normal.</Page>
+			<Page>For exactly 20 minutes, everything’s normal. I timed it. That’s how long it is between those bursts of brightness.</Page>
+		</Dialogue>
+		<DialogueTarget>TimeLoopExplanation1</DialogueTarget>
+	</DialogueNode>
+
+
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>That’s super weird.</Text>
+				<DialogueTarget>TimeLoopExplanation2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Does anyone else know?</Text>
+				<DialogueTarget>TimeLoopExplanation3</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>So... now what?</Text>
+				<DialogueTarget>TimeLoopExplanation4</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>TimeLoopExplanation2</Name>
+		<Dialogue>
+			<Page>Right? And speaking of weird...</Page>
+		</Dialogue>
+		<DialogueTarget>TimeLoopExplanation5</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>TimeLoopExplanation3</Name>
+		<Dialogue>
+			<Page>Well, about that...</Page>
+		</Dialogue>
+		<DialogueTarget>TimeLoopExplanation5</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>TimeLoopExplanation4</Name>
+		<Dialogue>
+			<Page>I dunno. And here’s the other thing...</Page>
+		</Dialogue>
+		<DialogueTarget>TimeLoopExplanation5</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>TimeLoopExplanation5</Name>
+		<Dialogue>
+			<Page>
+				I don’t think anyone on Timber Hearth is aware of the loop, ’cause I tried to ask ground control about it and everyone thought I’d gone crazy. And then later, they didn’t remember me asking in the first place.
+			</Page>
+			<Page>
+				So I guess it’s just you and me who know, time-buddy. Maybe because we were the only ones who saw those statues while they were glowing?
+			</Page>
+			<Page>
+				Kind of nice to not be alone, though. I’m glad you came by.
+			</Page>
+		</Dialogue>
+		<SetPersistentCondition>GabbroExplanationOver</SetPersistentCondition>
+		<DialogueTarget>GabbroMenu_2</DialogueTarget>
+	</DialogueNode>
+
+
+
+
+
+
+This is Gabbro’s menu that comes up once the player has chatted with Gabbro and discussed both the memory statues and the time loop, regardless of which loop or loops this happened in.
+
+
+	<DialogueNode>
+		<Name>Gabbro1</Name>
+		<EntryConditon>GabbroExplanationOver</EntryConditon>
+		<Dialogue>
+			<Page>Hey, it’s my time-pal!</Page>
+		</Dialogue>
+		<SetCondition>GabbroHi</SetCondition>
+		<DialogueTarget>MainGabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Gabbro2</Name>
+		<EntryCondition>GabbroExplanationOver</EntryCondition>
+		<EntryCondition>GabbroHi</EntryCondition>
+		<Dialogue>
+			<Page>Hey, hey, my time-buddy’s back!</Page>
+		</Dialogue>
+		<DialogueTarget>MainGabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>MainGabbroMenu</Name>
+		<Dialogue>
+			<Page>What’s on your mind?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>What are you doing out here?</Text>
+				<DialogueTarget>WhatAreYouDoing</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Where should I explore on Giant’s Deep?</Text>
+				<DialogueTarget>WhereToExplore</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>What’s up with this planet?</Text>
+				<DialogueTarget>ThisPlanet</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>I’ll see you later.</Text>
+				<DialogueTarget>Goodbye</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WhatAreYouDoing</Name>
+		<Dialogue>
+			<Page>Well, what are any of us doing here, truly?</Page>
+			<Page>...Nah, I’m just kidding. I’m out here exploring our solar system, same as you.</Page>
+			<Page>But I tell you what, outer space really gives you room to think. It’s quiet and peaceful out here, except when a cyclone comes by and lifts my little island paradise clean out of the water. Then: less peaceful.</Page>
+			<Page>Right now, I’m mostly thinking about what’s going on with this time loop.</Page>
+		</Dialogue>
+		<DialogueTarget>MainGabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WhereToExplore</Name>
+		<Dialogue>
+			<Page>Have you been to Statue Island? That’s what I’ve been calling it, what with it being an island covered in statues and all. It’s a must-see!</Page>
+			<Page>I found the Nomai statue that started glowing at me and replaying my memories on the beach there, but there are loads more where that one came from.</Page>
+			<Page>Here’s something else you might like - at the start of every time loop, I can see something flash in the sky. No idea what.</Page>
+			<Page>Whatever it is, I think it might be in orbit around Giant’s Deep.</Page>
+		</Dialogue>
+		<DialogueTarget>MainGabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ThisPlanet</Name>
+		<Dialogue>
+			<Page>Haha, I know, right?</Page>
+			<Page>...Oh, you meant, like, tell you more about it? I gotcha. Giant’s Deep is massive, and mostly water. No surprises there.</Page>
+			<Page>As for land masses, I’ve counted four islands, including this one. There’s also one that’s covered in Nomai statues. Pretty sure that’s where I left my ship.</Page>
+			<Page>You’ve seen the cyclones? Yeah, they’re hard to miss. They’ll toss up everything in their path, islands included. Little tip - if you get picked up, try to land in water. Less likely to kill you.</Page>
+			<Page>There’s also this big, sweet-looking mega-cyclone somewhere on this planet, so you’ll want to keep an eye out for that thing.</Page>
+		</Dialogue>
+		<DialogueTarget>MainGabbroMenu</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Goodbye</Name>
+		<Dialogue>
+			<Page>Sure thing. You know where to find me.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+
+
+
+TO ADD ONCE WE HAVE THIS FUNCTION AVAILABLE:
+
+			
+			<DialogueOption>
+				<Text>I have a question for you.</Text>
+				<DialogueTarget>GabbroQuestions</DialogueTarget>
+			</DialogueOption>
+
+
+	<DialogueNode>
+		<Name>GabbroQuestions</Name>
+		<Dialogue>
+			<Page>Cool, let’s hear it.</Page>
+		</Dialogue>
+		<DialogueOptionList>
+			<DialogueOption>
+				<Text>How many time loops have we experienced?</Text>
+				<DialogueTarget>QuestionLoops</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>What’s up with Statue Island?</Text>
+				<DialogueTarget>QuestionStatueIsland</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Alright, here’s the deal with the time loop...</Text>
+				<DialogueTarget>QuestionTimeLoop</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Actually, nevermind.</Text>
+				<DialogueTarget>QuestionsNevermind</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionList>
+	</DialogueNode>
+
+-->

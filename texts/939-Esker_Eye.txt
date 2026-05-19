@@ -1,0 +1,62 @@
+<DialogueTree>
+	<NameField>Esker</NameField>
+	
+	<DialogueNode>
+		<Name>FirstConversation</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Do you hear music?</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WaitingForOthers</Name>
+		<EntryCondition>AnyTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>Aren’t you forgetting someone?</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ReadyToPlay</Name>
+		<EntryCondition>AllTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>I can’t wait to play with the whole group again. Can I start?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes.</Text>
+				<DialogueTarget>StartPlaying</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Not yet.</Text>
+				<DialogueTarget>NotYet</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>StartPlaying</Name>
+		<Dialogue>
+			<Page>Ok, I won’t let you down!</Page>
+		</Dialogue>
+		<SetCondition>IsEskerPlaying</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotYet</Name>
+		<Dialogue>
+			<Page>Oh, ok. I’ll– I’ll get to play soon though, right?</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Farewell</Name>
+		<EntryCondition>JamSessionIsOver</EntryCondition>
+		<Dialogue>
+			<Page>Wow... How long has it been since I got to make music with everyone around a campfire?</Page>
+			<Page>I’m really happy we’re all here.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

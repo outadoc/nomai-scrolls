@@ -1,0 +1,389 @@
+<AstroObjectEntry>
+	<ID>BRITTLE_HOLLOW</ID>
+	
+	<Entry>
+		<ID>BH_RIEBECK</ID>
+		<Name>Riebeck’s Camp</Name>
+			
+		<RumorFact>
+			<ID>BH_RIEBECK_R1</ID>
+			<RumorName>Riebeck</RumorName>
+			<SourceID>TM_EYE_LOCATOR</SourceID>
+			<Text>Riebeck headed to Brittle Hollow to investigate something the Nomai were doing at the south pole.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_RIEBECK_R2</ID>
+			<RumorName>Riebeck</RumorName>
+			<Text>Riebeck landed their ship near the big dome at the south pole. The door leading inside was broken, so they decided to head north to the ruins on the equator in search of a way beneath the surface.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_RIEBECK_R3</ID>
+			<RumorName>Riebeck</RumorName>
+			<Text>Riebeck discovered an old Nomai path near their campsite on the equator. The path starts inside the ruined building with trees growing out of it.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_RIEBECK_R4</ID>
+			<RumorName>Riebeck</RumorName>
+			<Text>Riebeck reached the Crossroads and continued downward in search of oxygen.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_RIEBECK_X1</ID>
+			<Text>Riebeck has set up camp at the bottom of the Crossroads. Their excitement at being surrounded by so much Nomai history is matched only by their terror of the black hole.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_RIEBECK_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Riebeck is Timber Hearth's only archaeologist. They overcame their fear of space to explore Brittle Hollow's treasure trove of Nomai culture.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>BH_GRAVITY_CANNON</ID>
+		<Name>Gravity Cannon</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<ExploreFact>
+			<ID>BH_GRAVITY_CANNON_X1</ID>
+			<IgnoreMoreToExplore/>
+			<Text>A huge cylindrical structure that generates a strong upward gravity field.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_GRAVITY_CANNON_X2</ID>
+			<Text>I recalled a Nomai shuttle from the Quantum Moon.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>BH_QUANTUM_RESEARCH_TOWER</ID>
+		<Name>Tower of Quantum Knowledge</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<RumorFact>
+			<ID>BH_QUANTUM_RESEARCH_TOWER_R1</ID>
+			<Text>This tower (located on Brittle Hollow's equator) held useful knowledge for Nomai embarking on their first pilgrimage to the Quantum Moon.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_QUANTUM_RESEARCH_TOWER_R2</ID>
+			<SourceID>BH_GRAVITY_CANNON</SourceID>
+			<Text>A Nomai named Solanum was told to visit the Tower of Quantum Knowledge (on Brittle Hollow's equator) to learn one final rule before embarking on her pilgrimage to the Quantum Moon.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_QUANTUM_RESEARCH_TOWER_X1</ID>
+			<ClueType>QUANTUM_MOON</ClueType>
+			<Text>The Nomai built a shrine on the Quantum Moon to aid in the pilgrimage to its sixth location. "Remember this final rule: To explore the sixth location, the shrine must be on the moon’s north pole."</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_QUANTUM_RESEARCH_TOWER_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>The pilgrimage to the Quantum Moon was a deeply significant journey for the Nomai.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_QUANTUM_RESEARCH_TOWER_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>After the two groups of Nomai stranded on Ember Twin and Brittle Hollow were reunited, it became their united goal to find and visit the Quantum Moon.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>BH_QUANTUM_SHARD</ID>
+			<Name>Quantum Shard</Name>
+			<Curiosity>QUANTUM_MOON</Curiosity>
+
+			<RumorFact>
+				<ID>BH_QUANTUM_SHARD_R1</ID>
+				<Text>The Nomai noticed a strange rock shard that appeared to wander when no one was watching.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>BH_QUANTUM_SHARD_X1</ID>
+				<Text>A strange rock shard that wanders when no one is watching. The Nomai determined this shard is the reason objects in this grove behave in a quantum manner.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>BH_QUANTUM_SHARD_X2</ID>
+				<Text>The Nomai hypothesized that this shard is actually a piece of the Quantum Moon.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>BH_QUANTUM_SHARD_X3</ID>
+				<Text>This shard emits the same signal as the Quantum Moon.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+
+	<Entry>
+		<ID>BH_WARP_RECEIVER</ID>
+		<Name>Northern Glacier</Name>
+
+		<ExploreFact>
+			<ID>BH_WARP_RECEIVER_X1</ID>
+			<Text>The north pole of Brittle Hollow is covered in snow and ice. There is a uniquely shaped Nomai ruin on the surface.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_WARP_RECEIVER_X2</ID>
+			<Text>The Nomai were able to warp here from the White Hole Station. This is where they first recreated warp technology.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>BH_ESCAPE_POD</ID>
+		<Name>Escape Pod 1</Name>
+		<Curiosity>VESSEL</Curiosity>
+
+		<RumorFact>
+			<ID>BH_ESCAPE_POD_R1</ID>
+			<SourceID>BH_MURAL_3</SourceID>
+			<Text>One of the three Nomai escape pods landed somewhere on Brittle Hollow.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_ESCAPE_POD_X1</ID>
+			<Text>One of three Nomai escape pods that crashed in our solar system.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_ESCAPE_POD_X2</ID>
+			<Text>All three escape pods were launched from something called the Vessel, which was badly damaged.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>BH_OLD_SETTLEMENT</ID>
+		<Name>Old Settlement</Name>
+		<Curiosity>VESSEL</Curiosity>
+
+		<RumorFact>
+			<ID>BH_OLD_SETTLEMENT_R1</ID>
+			<SourceID>BH_ESCAPE_POD</SourceID>
+			<RumorName>Shelter Site</RumorName>
+			<Text>The Nomai survivors who crashed on Brittle Hollow climbed down the cliff to a shelter site below the surface.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_OLD_SETTLEMENT_X1</ID>
+			<Text>The Nomai constructed a temporary settlement beneath their crashed escape pod.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_OLD_SETTLEMENT_X2</ID>
+			<Text>The Nomai worked together to recall an eye-shaped signal they encountered while aboard the Vessel.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_OLD_SETTLEMENT_X3</ID>
+			<Text>The signal was somehow older than the universe itself. The Nomai decided to call it the "Eye of the universe."</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_OLD_SETTLEMENT_X4</ID>
+			<IgnoreMoreToExplore/>
+			<Text>The Nomai abandoned this settlement over growing concerns about its stability.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>BH_MURAL_3</ID>
+			<Name>Mural (Panel 3)</Name>
+			<Curiosity>VESSEL</Curiosity>
+
+			<ExploreFact>
+				<ID>BH_MURAL_3_X1</ID>
+				<ClueType>VESSEL</ClueType>
+				<Text>A mural of three escape pods evacuating the Nomai vessel.</Text>
+			</ExploreFact>
+		</Entry>
+		<Entry>
+			<ID>BH_MURAL_2</ID>
+			<Name>Mural (Panel 2)</Name>
+			<Curiosity>VESSEL</Curiosity>
+
+			<ExploreFact>
+				<ID>BH_MURAL_2_X1</ID>
+				<ClueType>VESSEL</ClueType>
+				<Text>A mural of Dark Bramble ensnaring the Nomai vessel.</Text>
+			</ExploreFact>
+		</Entry>
+		<Entry>
+			<ID>BH_MURAL_1</ID>
+			<Name>Mural (Panel 1)</Name>
+			<Curiosity>VESSEL</Curiosity>
+
+			<ExploreFact>
+				<ID>BH_MURAL_1_X1</ID>
+				<ClueType>VESSEL</ClueType>
+				<Text>A mural of a Nomai vessel encountering a signal.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+
+	<Entry>
+		<ID>BH_HANGING_CITY</ID>
+		<Name>The Hanging City</Name>
+
+		<RumorFact>
+			<ID>BH_HANGING_CITY_R1</ID>
+			<SourceID>BH_OLD_SETTLEMENT</SourceID>
+			<RumorName>Northern Settlement</RumorName>
+			<RumorNamePriority>0</RumorNamePriority>
+			<Text>The Nomai decided to migrate from the Old Settlement to the northern glacier. They used gravity crystals to craft a stable path beneath the surface.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_HANGING_CITY_R2</ID>
+			<RumorName>The Hanging City</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<Text>There's a huge Nomai city just to the north of Riebeck's campsite.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_HANGING_CITY_X1</ID>
+			<Text>A Nomai city suspended beneath Brittle Hollow's northern glacier. The city is divided vertically into four districts.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_HANGING_CITY_X2</ID>
+			<Text>I found a switch in the Meltwater District that raises and lowers the Black Hole Forge.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_HANGING_CITY_X3</ID>
+			<Text>The Nomai debated how to obtain the powerful, highly advanced warp core required for the Ash Twin Project.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_HANGING_CITY_X4</ID>
+			<Text>The Nomai traveled to this solar system in pursuit of a signal from something older than the universe itself. They named the source of this signal the "Eye of the universe."</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>BH_BLACK_HOLE_FORGE</ID>
+		<Name>Black Hole Forge</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+
+		<RumorFact>
+			<ID>BH_BLACK_HOLE_FORGE_R1</ID>
+			<SourceID>BH_HANGING_CITY</SourceID>
+			<Text>The Black Hole Forge is suspended below the Hanging City. I found a switch in the Meltwater District that raises and lowers the forge.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_BLACK_HOLE_FORGE_R2</ID>
+			<SourceID>BH_HANGING_CITY</SourceID>
+			<Text>The Black Hole Forge District is the highest district in the Hanging City.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_BLACK_HOLE_FORGE_R3</ID>
+			<SourceID>BH_HANGING_CITY</SourceID>
+			<Text>A Nomai named Poke planned to create a new advanced warp core in the Black Hole Forge.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_BLACK_HOLE_FORGE_R4</ID>
+			<SourceID>TT_WARP_TOWERS</SourceID>
+			<Text>The Nomai crafted warp cores at the Black Hole Forge before delivering them to Ash Twin.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_BLACK_HOLE_FORGE_X4</ID>
+			<Text>A warp tower's alignment point is not its warp receiver. Rather, a warp tower always aligns with the center of its corresponding astral body.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_BLACK_HOLE_FORGE_X5</ID>
+			<Text>The warp receiver must be located on (or in close orbit around) the relevant astral body.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_BLACK_HOLE_FORGE_X6</ID>
+			<Text>The Hourglass Twins are so close together they function as a single astral body, with a shared alignment point in between them.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_BLACK_HOLE_FORGE_X1</ID>
+			<Text>All of the warp towers were being constructed on Ash Twin, while the six warp receivers were being constructed at different locations.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_BLACK_HOLE_FORGE_X3</ID>
+			<Text>A Nomai named Poke successfully forged an advanced warp core for the Ash Twin Project.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>BH_WARP_ALIGNMENT_MAP</ID>
+			<Name>Alignment Angle Diagram</Name>
+			<Curiosity>TIME_LOOP</Curiosity>
+
+			<ExploreFact>
+				<ID>BH_WARP_ALIGNMENT_MAP_X1</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>A diagram depicting the alignment angle between a warp tower and its corresponding astral body.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>BH_WARP_ALIGNMENT_MAP_X2</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>Warp tower alignment angles are not exact. They only need to be within five degrees of the astral body's center.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>BH_WARP_ALIGNMENT_MAP_X3</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>This results in slightly longer warp windows that last roughly several seconds.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>BH_WARP_ALIGNMENT_MAP_X4</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>Anyone stepping onto the warp platform during the active window will be immediately warped.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+
+	<Entry>
+		<ID>BH_OBSERVATORY</ID>
+		<Name>Southern Observatory</Name>
+		<Curiosity>SUNKEN_MODULE</Curiosity>
+
+		<RumorFact>
+			<ID>BH_OBSERVATORY_R1</ID>
+			<SourceID>TM_EYE_LOCATOR</SourceID>
+			<Text>The Nomai decided to build a larger, more sophisticated Eye signal locator on Brittle Hollow's south pole.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_OBSERVATORY_R2</ID>
+			<SourceID>GD_CONSTRUCTION_YARD</SourceID>
+			<Text>There are two paths beneath Brittle Hollow's surface that lead to the observatory. One starts at the gravity cannon, and the other starts at the Tower of Quantum Knowledge.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_OBSERVATORY_R3</ID>
+			<SourceID>BH_RIEBECK</SourceID>
+			<Text>Riebeck says you can't get into the observatory from the surface (they tried), but there's probably a path to it beneath the crust somewhere.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>BH_OBSERVATORY_R4</ID>
+			<Text>There's a door to the observatory on the surface, but it's broken.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>BH_OBSERVATORY_X1</ID>
+			<Text>The new, more sensitive locator the Nomai built in this observatory was unable to detect any trace of the Eye's signal.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_OBSERVATORY_X2</ID>
+			<Text>Based on their knowledge of the Quantum Moon, the Nomai believed the Eye was in a distant orbit around the sun.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_OBSERVATORY_X3</ID>
+			<Text>The Nomai decided to stop searching for the Eye's signal and instead look for it visually by sending out a deep space probe.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>BH_OBSERVATORY_X4</ID>
+			<Text>There were concerns that the probability of launching a probe in the correct direction would be absurdly small.</Text>
+		</ExploreFact>
+		
+		<Entry>
+			<ID>BH_TORNADO_SIMULATION</ID>
+			<Name>Tornado Simulation</Name>
+			<Curiosity>SUNKEN_MODULE</Curiosity>
+
+			<RumorFact>
+				<ID>BH_TORNADO_SIMULATION_R1</ID>
+				<SourceID>GD_CONSTRUCTION_YARD</SourceID>
+				<RumorName>Ocean Current Discovery</RumorName>
+				<Text>The Nomai at the Southern Observatory constructed a model of Giant's Deep that revealed how an object might sink below the strong ocean current.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>BH_TORNADO_SIMULATION_X1</ID>
+				<Text>Most cyclones on Giant's Deep rotate clockwise. These are the cyclones the Nomai used to send components into orbit.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>BH_TORNADO_SIMULATION_X2</ID>
+				<ClueType>SUNKEN_MODULE</ClueType>
+				<Text>There also exists a rarer type of cyclone that spins the opposite direction and pushes objects beneath the waters and below the current.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+</AstroObjectEntry>

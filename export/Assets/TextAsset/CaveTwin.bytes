@@ -1,0 +1,327 @@
+<AstroObjectEntry>
+	<ID>CAVE_TWIN</ID>
+
+	<Entry>
+		<ID>CT_CHERT</ID>
+		<Name>Chert’s Camp</Name>
+
+		<ExploreFact>
+			<ID>CT_CHERT_X1</ID>
+			<Text>Chert has set up their astronomy gear on the north pole of Ember Twin.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_CHERT_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Chert has spotted an unusually high number of supernovae recently.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_CHERT_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>All of the stars in the universe are dying, including our sun.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_CHERT_X4</ID>
+			<IgnoreMoreToExplore/>
+			<Text>The stars are simply dying from old age. Apparently they're much older than we realized.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_CHERT_X5</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Chert has become catatonic in response to our sun's imminent death.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_QUANTUM_MOON_LOCATOR</ID>
+		<Name>Quantum Moon Locator</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<ExploreFact>
+			<ID>CT_QUANTUM_MOON_LOCATOR_X1</ID>
+			<Text>A Nomai device created to track the Quantum Moon's location.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_QUANTUM_MOON_LOCATOR_X2</ID>
+			<Text>The Nomai hypothesized that the Quantum Moon might be a form of macroscopic quantum mechanics.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_QUANTUM_MOON_LOCATOR_X3</ID>
+			<Text>The Quantum Moon travels to at least five locations, but sometimes the locator can't tell where the moon is.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_GRAVITY_CANNON</ID>
+		<Name>Gravity Cannon</Name>
+		<Curiosity>COMET_CORE</Curiosity>
+
+		<RumorFact>
+			<ID>CT_GRAVITY_CANNON_R1</ID>
+			<SourceID>COMET_SHUTTLE</SourceID>
+			<Text>The Nomai shuttle that's frozen on the Interloper can be called home to the gravity cannon on Ember Twin.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_GRAVITY_CANNON_X1</ID>
+			<IgnoreMoreToExplore/>
+			<Text>A huge cylindrical structure that generates a strong upward gravity field.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_GRAVITY_CANNON_X2</ID>
+			<Text>I recalled a Nomai shuttle from the Interloper.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_ESCAPE_POD</ID>
+		<Name>Escape Pod 2</Name>
+		<Curiosity>VESSEL</Curiosity>
+
+		<RumorFact>
+			<ID>CT_ESCAPE_POD_R1</ID>
+			<SourceID>BH_MURAL_3</SourceID>
+			<RumorName>Escape Pod</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<Text>One of the three Nomai escape pods landed somewhere on the Hourglass Twins.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_ESCAPE_POD_R2</ID>
+			<SourceID>CT_CHERT</SourceID>
+			<RumorName>Nomai Shipwreck</RumorName>
+			<Text>Chert saw a Nomai shipwreck shooting a beam of light into the sky somewhere on Ember Twin's southern hemisphere.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_ESCAPE_POD_X1</ID>
+			<Text>One of three Nomai escape pods that crashed in our solar system.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_ESCAPE_POD_X2</ID>
+			<Text>All three escape pods were launched from something called the Vessel, which was badly damaged.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_HIGH_ENERGY_LAB</ID>
+		<Name>High Energy Lab</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+
+		<RumorFact>
+			<ID>CT_HIGH_ENERGY_LAB_R1</ID>
+			<SourceID>WHITE_HOLE_STATION</SourceID>
+			<Text>The negative time interval measured at the White Hole Station was further investigated at the High Energy Lab (in the canyon at Ember Twin’s equator).</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_HIGH_ENERGY_LAB_R2</ID>
+			<Text>The Ash Twin Project was planned at the High Energy Lab, a building with large solar panels on Ember Twin’s equator.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_HIGH_ENERGY_LAB_R3</ID>
+			<Text>The High Energy Lab can only be accessed by a path from the Sunless City.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_HIGH_ENERGY_LAB_X1</ID>
+			<Text>The Nomai successfully reproduced the temporal anomaly first observed at the White Hole Station (warped objects appear to arrive before they depart).</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_HIGH_ENERGY_LAB_X2</ID>
+			<Text>The Nomai discovered they could increase the negative time interval between arrival and departure by adding energy to the warp cores.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_HIGH_ENERGY_LAB_X3</ID>
+			<Text>The Nomai wanted to know if a 22-minute negative time interval was possible. They concluded it would require new technology to produce the necessary energy as well an advanced warp core to handle those energies. Ash Twin was proposed as a location for the project.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>CT_WARP_TOWER_MAP</ID>
+			<Name>Ash Twin Tower Designs</Name>
+			<Curiosity>TIME_LOOP</Curiosity>
+
+			<RumorFact>
+				<ID>CT_WARP_TOWER_MAP_R1</ID>
+				<SourceID>BH_BLACK_HOLE_FORGE</SourceID>
+				<Text>There are tower designs in the High Energy Lab that reveal each warp receiver's location.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>CT_WARP_TOWER_MAP_X1</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>Designs for each of the towers on Ash Twin's equator.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>CT_WARP_TOWER_MAP_X4</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>Each tower warps to a different planet (although many Nomai were quick to note that the sun is not actually a planet).</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>CT_WARP_TOWER_MAP_X3</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>Each tower was designed to visually reflect its warp destination.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>CT_WARP_TOWER_MAP_X2</ID>
+				<ClueType>TIME_LOOP</ClueType>
+				<Text>The towers allowed the Nomai to quickly travel between Ash Twin and all other locations crucial to the Ash Twin Project.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+
+	<Entry>
+		<ID>CT_SUNLESS_CITY</ID>
+		<Name>The Sunless City</Name>
+
+		<RumorFact>
+			<ID>CT_SUNLESS_CITY_R1</ID>
+			<SourceID>CT_ESCAPE_POD</SourceID>
+			<RumorName>Shelter Site</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<Text>The Nomai survivors who crashed on Ember Twin decided to seek shelter in the caves beneath their crashed escape pod.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_SUNLESS_CITY_R3</ID>
+			<SourceID>CT_ESCAPE_POD</SourceID>
+			<RumorName>Shelter Site</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<Text>The Nomai discovered a promising long-term shelter site at the end of one of the passages beneath the escape pod.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_SUNLESS_CITY_R4</ID>
+			<SourceID>CT_CHERT</SourceID>
+			<RumorName>Underground Settlement</RumorName>
+			<RumorNamePriority>0</RumorNamePriority>
+			<Text>Chert thinks the lack of surface ruins means the Nomai must have lived somewhere underground.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_SUNLESS_CITY_R5</ID>
+			<RumorName>The Sunless City</RumorName>
+			<RumorNamePriority>2</RumorNamePriority>
+			<Text>There is a path leading to the High Energy Lab from the Sunless City.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_SUNLESS_CITY_R2</ID>
+			<RumorName>The Sunless City</RumorName>
+			<RumorNamePriority>2</RumorNamePriority>
+			<Text>I found a trailmarker for the the Sunless City, but the path is blocked.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_SUNLESS_CITY_X1</ID>
+			<Text>A Nomai city built into the walls of a huge underground cavern. The city is divided vertically into four districts.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_SUNLESS_CITY_X2</ID>
+			<Text>The Nomai debated building a Sun Station in order to power the Ash Twin Project. Several Nomai opposed its construction, arguing that failure could result in the destruction of the solar system.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_SUNLESS_CITY_X3</ID>
+			<Text>The Nomai traveled to this solar system in pursuit of a signal from something older than the universe itself. They named the source of this signal the "Eye of the universe."</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_ANGLERFISH_FOSSIL</ID>
+		<Name>Anglerfish Fossil</Name>
+		<Curiosity>VESSEL</Curiosity>
+
+		<RumorFact>
+			<ID>CT_ANGLERFISH_FOSSIL_R1</ID>
+			<SourceID>CT_ESCAPE_POD</SourceID>
+			<RumorName>Anglerfish Fossil</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<Text>I found a cave with an anglerfish fossil inside, but the opening is only big enough for my scout.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_ANGLERFISH_FOSSIL_R2</ID>
+			<SourceID>BH_HANGING_CITY</SourceID>
+			<RumorName>Anglerfish Fossil</RumorName>
+			<RumorNamePriority>1</RumorNamePriority>
+			<Text>The Nomai learned how to evade anglerfish (theoretically, at least) by studying an anglerfish fossil they found on Ember Twin.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_ANGLERFISH_FOSSIL_R3</ID>
+			<SourceID>CT_SUNLESS_CITY</SourceID>
+			<RumorName>Fossil Fish Cave</RumorName>
+			<RumorNamePriority>0</RumorNamePriority>
+			<Text>Nomai children used to play a game in Fossil Fish Cave. There is a way to enter Fossil Fish Cave from Stepping Stone Cave.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_ANGLERFISH_FOSSIL_R4</ID>
+			<SourceID>CT_SUNLESS_CITY</SourceID>
+			<RumorName>Fossil Fish Cave</RumorName>
+			<RumorNamePriority>0</RumorNamePriority>
+			<Text>The entrance from Stepping Stone Cave is hard to see unless the anglerfish is fed a light first.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_ANGLERFISH_FOSSIL_X1</ID>
+			<ClueType>VESSEL</ClueType>
+			<Text>Nomai children used to play a game here. One player was the anglerfish and wore a blindfold. The rest of the children (the littlefish) lined up against one wall. When the anglerfish said go, the littlefish had to sneak across to the other side.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_ANGLERFISH_FOSSIL_X2</ID>
+			<ClueType>VESSEL</ClueType>
+			<Text>The blindfold rule was added because real anglerfish are blind.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_ANGLERFISH_FOSSIL_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>The adult Nomai were delighted to see the children incorporate their research into the game's rules.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_QUANTUM_CAVES</ID>
+		<Name>Quantum Caves</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<RumorFact>
+			<ID>CT_QUANTUM_CAVES_R1</ID>
+			<SourceID>BH_QUANTUM_SHARD</SourceID>
+			<RumorName>Quantum Signal</RumorName>
+			<Text>The Nomai detected a quantum signal coming from somewhere on the Hourglass Twins.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_QUANTUM_CAVES_X1</ID>
+			<Text>The Nomai noticed a strange wandering rock that appeared in multiple caves on Ember Twin’s northern hemisphere.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_QUANTUM_CAVES_X2</ID>
+			<Text>I found a strange rock shard that moves when I’m not watching. It emits a signal on the Quantum Fluctuations frequency.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>CT_LAKEBED_CAVERN</ID>
+		<Name>Lakebed Cave</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<RumorFact>
+			<ID>CT_LAKEBED_CAVERN_R1</ID>
+			<SourceID>CT_QUANTUM_CAVES</SourceID>
+			<Text>The wandering rock was first spotted in a cave at the bottom of the dry lakebed at Ember Twin’s north pole.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>CT_LAKEBED_CAVERN_R2</ID>
+			<SourceID>CT_QUANTUM_CAVES</SourceID>
+			<Text>A Nomai named Coleus mysteriously vanished from a cave at the bottom of the dry lakebed at Ember Twin’s north pole.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>CT_LAKEBED_CAVERN_X1</ID>
+			<Text>A Nomai named Coleus was standing on the wandering rock when another Nomai's lantern died. When they relit the lantern, Coleus and the rock were both gone.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_LAKEBED_CAVERN_X2</ID>
+			<ClueType>QUANTUM_MOON</ClueType>
+			<Text>To travel with a quantum object, I must stand on the object and cease to observe my surroundings (meaning I must be in complete darkness). Coleus used this quantum rule to escape the cave he was trapped in.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>CT_LAKEBED_CAVERN_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Coleus and Merolae returned to examine the rock. They theorized that when a conscious being is in contact with a quantum object and ceases to observe his or her surroundings, the being can become entangled with that quantum object, and they both move together.</Text>
+		</ExploreFact>
+	</Entry>
+
+</AstroObjectEntry>

@@ -1,0 +1,202 @@
+<AstroObjectEntry>
+	<ID>GIANTS_DEEP</ID>
+
+	<Entry>
+		<ID>GD_OCEAN</ID>
+		<Name>Ocean Depths</Name>
+		<Curiosity>SUNKEN_MODULE</Curiosity>
+
+		<RumorFact>
+			<ID>GD_OCEAN_R1</ID>
+			<SourceID>GD_GABBRO_ISLAND</SourceID>
+			<Text>Gabbro says there’s a strong current beneath the surface of the ocean that prevents anything from sinking below it.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>GD_OCEAN_R2</ID>
+			<SourceID>GD_CONSTRUCTION_YARD</SourceID>
+			<Text>The Nomai on the Construction Yard saw something sink beneath the underwater current, which they'd previously thought was impossible.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>GD_OCEAN_R3</ID>
+			<SourceID>GD_BRAMBLE_ISLAND</SourceID>
+			<Text>Feldspar found a way to reach the core of Giant’s Deep.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>GD_OCEAN_X1</ID>
+			<Text>The ocean is surprisingly calm beneath the current. Some sort of electrical field surrounds the planet's core.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_OCEAN_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>I passed through the electric barrier and reached the coral forest at the planet's core.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>GD_GABBRO_ISLAND</ID>
+		<Name>Gabbro’s Island</Name>
+
+		<RumorFact>
+			<ID>GD_GABBRO_ISLAND_R1</ID>
+			<SourceID>TH_VILLAGE</SourceID>
+			<RumorName>Gabbro</RumorName>
+			<Text>Hal says Gabbro went back to Giant’s Deep to try to learn more about the Nomai statue in the observatory.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>GD_GABBRO_ISLAND_X0</ID>
+			<Text>Gabbro is lounging in a hammock near the island’s shore.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_GABBRO_ISLAND_X1</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Gabbro found a Nomai statue on another island. The statue's eyes started glowing and Gabbro saw their memories flash before their eyes.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_GABBRO_ISLAND_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Gabbro remembers dying. They saw their memories flash before their eyes, just like the time with the statue.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_GABBRO_ISLAND_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>Gabbro and I seem to be the only ones aware that we're in a time loop.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>GD_CONSTRUCTION_YARD</ID>
+		<Name>Construction Yard</Name>
+		<Curiosity>SUNKEN_MODULE</Curiosity>
+
+		<RumorFact>
+			<ID>GD_CONSTRUCTION_YARD_R1</ID>
+			<SourceID>ORBITAL_PROBE_CANNON</SourceID>
+			<Text>The Nomai built the Orbital Probe Cannon at a Construction Yard on Giant’s Deep.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>GD_CONSTRUCTION_YARD_X1</ID>
+			<Text>This island is where the Nomai built the Orbital Probe Cannon.</Text>
+		</ExploreFact>		
+		<ExploreFact>
+			<ID>GD_CONSTRUCTION_YARD_X2</ID>
+			<Text>For some reason, the Nomai put the Orbital Probe Cannon on indefinite hiatus. The cannon was not asked to fire.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_CONSTRUCTION_YARD_X3</ID>
+			<Text>According to a Nomai computer, a long-range probe was recently launched from the Orbital Probe Cannon.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>GD_BRAMBLE_ISLAND</ID>
+		<Name>Bramble Island</Name>
+		<Curiosity>SUNKEN_MODULE</Curiosity>
+
+		<ExploreFact>
+			<ID>GD_BRAMBLE_ISLAND_X1</ID>
+			<Text>An island of thorny vines and what appears to be a frozen jellyfish. It looks like Feldspar camped here before heading off to Dark Bramble.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>GD_STATUE_ISLAND</ID>
+		<Name>Statue Island</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+
+		<RumorFact>
+			<ID>GD_STATUE_ISLAND_R1</ID>
+			<SourceID>GD_GABBRO_ISLAND</SourceID>
+			<Text>One of the islands on Giant’s Deep has a Nomai statue on the beach just like the one Gabbro brought back to Timber Hearth.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>GD_STATUE_ISLAND_R2</ID>
+			<SourceID>GD_GABBRO_ISLAND</SourceID>
+			<Text>Statue Island (as Gabbro calls it) is the one with two islands connected by a natural rock arch.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>GD_STATUE_ISLAND_X1</ID>
+			<Text>This island must be where the Nomai created statues like the one in our observatory.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_STATUE_ISLAND_X2</ID>
+			<IgnoreMoreToExplore/>
+			<Text>I found a Nomai statue lying on the beach. It looks just like the one in our observatory.</Text>
+		</ExploreFact>
+
+		<Entry>
+			<ID>GD_STATUE_WORKSHOP</ID>
+			<Name>Statue Workshop</Name>
+			<Curiosity>TIME_LOOP</Curiosity>
+
+			<RumorFact>
+				<ID>GD_STATUE_WORKSHOP_R1</ID>
+				<RumorName>Statue Workshop</RumorName>
+				<RumorNamePriority>1</RumorNamePriority>
+				<Text>I found a sign for a "Statue Workshop" next to a broken door that used to lead inside the island.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>GD_STATUE_WORKSHOP_R2</ID>
+				<RumorName>Statue Workshop</RumorName>
+				<RumorNamePriority>1</RumorNamePriority>
+				<Text>Some Nomai children debated bypassing the Statue Workshop's door and sneaking inside via an alternate (more dangerous) route.</Text>
+			</RumorFact>
+			<RumorFact>
+				<ID>GD_STATUE_WORKSHOP_R3</ID>
+				<RumorName>Island Interior</RumorName>
+				<RumorNamePriority>0</RumorNamePriority>
+				<Text>I can see into a large cave from one of the ruins on top of the island. The bottom of the cave is filled with water.</Text>
+			</RumorFact>
+
+			<ExploreFact>
+				<ID>GD_STATUE_WORKSHOP_X1</ID>
+				<Text>Nomai statues were designed to pair with a single user, record their memories, and send those memories to a storage unit within the Ash Twin Project.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>GD_STATUE_WORKSHOP_X2</ID>
+				<Text>Each storage unit inside the Ash Twin Project was equipped with a mask (the statue’s counterpart), which could then send those stored memories back to the corresponding user.</Text>
+			</ExploreFact>
+			<ExploreFact>
+				<ID>GD_STATUE_WORKSHOP_X3</ID>
+				<Text>The statues were designed to only activate once the Ash Twin Project succeeded, or in the event that it failed.</Text>
+			</ExploreFact>
+		</Entry>
+	</Entry>
+
+	<Entry>
+		<ID>GD_QUANTUM_TOWER</ID>
+		<Name>Tower of Quantum Trials</Name>
+		<Curiosity>QUANTUM_MOON</Curiosity>
+
+		<RumorFact>
+			<ID>GD_QUANTUM_TOWER_R1</ID>
+			<SourceID>BH_QUANTUM_SHARD</SourceID>
+			<RumorName>Quantum Signal</RumorName>
+			<Text>The Nomai detected a Quantum signal coming from somewhere on Giant’s Deep.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>GD_QUANTUM_TOWER_X1</ID>
+			<IgnoreMoreToExplore/>
+			<Text>This tower held knowledge a Nomai needed to make his or her first quantum journey.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_QUANTUM_TOWER_X2</ID>
+			<ClueType>QUANTUM_MOON</ClueType>
+			<Text>"Observing a quantum object; observing an image of a quantum object. These are the same."</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_QUANTUM_TOWER_X3</ID>
+			<ClueType>QUANTUM_MOON</ClueType>
+			<Text>The Nomai called this the "Rule of Quantum Imaging."</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>GD_QUANTUM_TOWER_X4</ID>
+			<IgnoreMoreToExplore/>
+			<Text>"Remember, the other quantum shards have other lessons to teach."</Text>
+		</ExploreFact>
+	</Entry>
+</AstroObjectEntry>

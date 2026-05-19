@@ -1,0 +1,55 @@
+<DialogueTree>
+	<NameField>the Prisoner</NameField>
+	
+	<DialogueNode>
+		<Name>WaitingForOthers</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>This fire… what a warm and beautiful light it makes.</Page>
+			<Page>Go, find the others. What comes next cannot be done alone.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ReadyToPlay</Name>
+		<EntryCondition>AllTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>I hadn’t dared to hope that anyone would hear the signal, for how briefly I set it free… Yet, here we are. Are you ready for the final step?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes.</Text>
+				<DialogueTarget>StartPlaying</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Not yet.</Text>
+				<DialogueTarget>NotYet</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>StartPlaying</Name>
+		<Dialogue>
+			<Page>Then it’s time! Time to send our spark out into the darkness.</Page>
+		</Dialogue>
+		<SetCondition>IsPrisonerPlaying</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotYet</Name>
+		<Dialogue>
+			<Page>I have awaited this moment for a long time. For so long. It is no trouble to wait a little longer.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Farewell</Name>
+		<EntryCondition>JamSessionIsOver</EntryCondition>
+		<Dialogue>
+			<Page>...How beautiful. It’s different than I’d envisioned.</Page>
+			<Page>Whatever happens next, I do not think it is to be feared.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

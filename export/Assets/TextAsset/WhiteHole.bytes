@@ -1,0 +1,49 @@
+<AstroObjectEntry>
+	<ID>WHITE_HOLE</ID>
+	<Entry>
+		<ID>WHITE_HOLE_STATION</ID>
+		<Name>White Hole Station</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+
+		<RumorFact>
+			<ID>WHS_R1</ID>
+			<SourceID>BH_WARP_RECEIVER</SourceID>
+			<Text>There is a White Hole Station on the other side of Brittle Hollow's black hole.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>WHS_R2</ID>
+			<SourceID>BH_WARP_RECEIVER</SourceID>
+			<Text>Several Nomai returned to the station to investigate an equipment reading that appeared to violate causality.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>WHS_R3</ID>
+			<SourceID>CT_HIGH_ENERGY_LAB</SourceID>
+			<Text>The experiments at the High Energy Lab were based on extraordinary findings from the White Hole Station.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>WHS_R4</ID>
+			<SourceID>TT_WARP_TOWERS</SourceID>
+			<Text>The towers on Ash Twin were modeled after the White Hole Station.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>WHS_X4</ID>
+			<ClueType>TIME_LOOP</ClueType>
+			<Text>Every Nomai warp tower is tuned to a specific astral body.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>WHS_X1</ID>
+			<ClueType>TIME_LOOP</ClueType>
+			<Text>To use a tower, you must be standing on the warp platform during the tower's alignment with its corresponding astral body (the alignment happens when the astral body is directly overhead).</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>WHS_X2</ID>
+			<Text>The Nomai noticed something strange: Warped objects appeared to arrive at the receiver on Brittle Hollow slightly before they departed the White Hole Station.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>WHS_X3</ID>
+			<IgnoreMoreToExplore/>
+			<Text>This negative time interval between an object arriving and departing was incredibly miniscule (roughly one hundred-thousandth of a second). The Nomai were skeptical if their equipment could even measure time to such a small degree.</Text>
+		</ExploreFact>
+	</Entry>	
+</AstroObjectEntry>

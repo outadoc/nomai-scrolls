@@ -1,0 +1,10 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>The Nomai never got to see it for themselves, but thanks to their efforts and technology, a Hearthian was able to reach the Eye of the universe.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

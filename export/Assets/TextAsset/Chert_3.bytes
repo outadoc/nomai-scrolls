@@ -1,0 +1,135 @@
+<DialogueTree>
+	<NameField>Chert</NameField>
+
+<!-- 
+	Distraught Chert! AKA Chert period 3, AKA the part where Chert stops being useful to players.
+-->
+
+	<DialogueNode>
+		<Name>ChertIntro</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>The stars! They're all dying! There’ve been too many supernovae for it to be anything else!</Page>
+			<Page>We’re next, do you understand?! Our sun! By Hearth’s name, <![CDATA[<i>]]>we’re next<![CDATA[</i>]]>!</Page>
+		</Dialogue>
+		<RevealFacts>
+			<FactID>CT_CHERT_X1</FactID>
+			<FactID>CT_CHERT_X3</FactID>
+		</RevealFacts>
+		<SetCondition>SaidHiToChert3</SetCondition>
+		<DialogueTarget>Questions</DialogueTarget>
+	</DialogueNode>
+
+<!--
+	CHERT POST-INTRO TEXT
+-->
+
+	<DialogueNode>
+		<Name>ChertSecondary</Name>
+		<EntryCondtion>SaidHiToChert3</EntryCondtion>
+		<Dialogue>
+			<Page>Please, just... Leave me alone, won’t you?</Page>
+		</Dialogue>
+	</DialogueNode>
+
+<!-- 
+	CHERT BASIC QUESTIONS MENU
+-->
+
+	<DialogueNode>
+		<Name>Questions</Name>
+		<Dialogue><Page></Page></Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>What do you mean, "we’re next"?</Text>
+				<DialogueTarget>ChertNext</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>I found something!</Text>
+				<DialogueTarget>FoundSomething</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Why are the stars dying?</Text>
+				<DialogueTarget>Chert4</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>What are you doing out here?</Text>
+				<DialogueTarget>Chert1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Where should I explore here?</Text>
+				<DialogueTarget>Chert2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>How dangerous is that big column of falling sand?</Text>
+				<DialogueTarget>Chert3</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Just saying hi.</Text>
+				<DialogueTarget>Chert5</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ChertNext</Name>
+		<Dialogue>
+			<Page>It’s the stars, you see. All the other stars are dying out. Oh, why did we have to be born at the end of the universe? And our sun, it...</Page>
+			<Page>The star charts! Why? Why did I want to update them so badly? I didn’t have to know, but no, oh no, I had to update the star charts! I had to go looking for things I shouldn’t have! And now our sun is about to... about to... oh...</Page>
+			<Page>...I don’t feel well. I’d like to be alone, please.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>FoundSomething</Name>
+		<Dialogue>
+			<Page>Why, isn’t that great! Do you know what, I’ve found a few things myself! Most of them have to do with the sun exploding!</Page>
+			<Page>Oh, who <![CDATA[<i>]]>cares<![CDATA[</i>]]>?! What does it matter?! <![CDATA[<i>]]>Nothing<![CDATA[</i>]]> matters anymore! The sun is about to go supernova! And me, all my research, my life’s work, wasted!</Page>
+			<Page><![CDATA[<size=50>]]>Wasted, you understand?!<![CDATA[</size>]]></Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert1</Name>
+		<Dialogue>
+			<Page>The star charts! It’s all the star charts’ fault! I didn’t have to know, but no, oh no, I had to update the star charts! I had to go looking for things I shouldn’t have! And now our sun is about to... about to... oh...</Page>
+			<Page>...I don’t feel well. I’d like to be alone, please.</Page>
+		</Dialogue>
+		<DialogueTarget>Questions</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert2</Name>
+		<Dialogue>
+			<Page>Where should you <![CDATA[<i>]]>go<![CDATA[</i>]]>? Where can anyone go? Can’t you see it’s too late now?</Page>
+			<Page>Oh, who <![CDATA[<i>]]>cares<![CDATA[</i>]]>?! What does it matter?! <![CDATA[<i>]]>Nothing<![CDATA[</i>]]> matters anymore! The sun will probably blow up before you can even get there! And me, all my research, my life’s work, wasted!</Page>
+			<Page><![CDATA[<size=50>]]>Wasted, you understand?!<![CDATA[</size>]]></Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert3</Name>
+		<Dialogue>
+			<Page>Not as dangerous as what’s about to happen to our entire solar system!</Page>
+			<Page>I... I don’t feel well. I’d like to be alone, please. I can’t believe this...</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert4</Name>
+		<Dialogue>
+			<Page>I don't know — they're old! Far older than we realized and now all of them are dying!</Page>
+			<Page>What does it matter?! It doesn’t! It doesn’t matter at all! <![CDATA[<i>]]>Nothing<![CDATA[</i>]]> matters anymore! All my research, my life’s work, wasted!</Page>
+			<Page><![CDATA[<size=50>]]>Wasted, you understand?!<![CDATA[</size>]]></Page>
+		</Dialogue>
+		<RevealFacts><FactID>CT_CHERT_X4</FactID></RevealFacts>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert5</Name>
+		<Dialogue>
+			<Page>I can’t believe this. I can’t believe this is happening. I can’t... I won’t! I <![CDATA[<i>]]>won’t<![CDATA[</i>]]> believe it!</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

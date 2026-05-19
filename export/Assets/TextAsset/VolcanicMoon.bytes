@@ -1,0 +1,21 @@
+<AstroObjectEntry>
+	<ID>VOLCANIC_MOON</ID>
+	<Entry>
+		<ID>VM_VOLCANO</ID>
+		<Name>Volcanic Testing Site</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+		
+		<ExploreFact>
+			<ID>VM_VOLCANO_X1</ID>
+			<Text>Ore samples from the Nomai Mines on Timber Hearth were sent to this volcano for durability testing.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>VM_VOLCANO_X2</ID>
+			<Text>The Nomai were trying to craft a (briefly) supernova-proof shell to encase the Ash Twin Project.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>VM_VOLCANO_X3</ID>
+			<Text>Even the smallest crack or opening in the protective shell would destroy everything.</Text>
+		</ExploreFact>
+	</Entry>
+</AstroObjectEntry>

@@ -1,0 +1,56 @@
+<DialogueTree>
+	<NameField>Feldspar</NameField>
+	
+	<DialogueNode>
+		<Name>WaitingForOthers</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Hatchling! You found me!</Page>
+			<Page>Nice to have company around a campfire, isn’t it? Go on, go get the others. Wouldn’t want ’em to miss out!</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ReadyToPlay</Name>
+		<EntryCondition>AllTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>Whaddya say, then — should I get out the ol’ harmonica?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes.</Text>
+				<DialogueTarget>StartPlaying</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Not yet.</Text>
+				<DialogueTarget>NotYet</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>StartPlaying</Name>
+		<Dialogue>
+			<Page>Ha <![CDATA[<i>]]>ha<![CDATA[</i>]]>! Here goes nothing!</Page>
+		</Dialogue>
+		<SetCondition>IsFeldsparPlaying</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotYet</Name>
+		<Dialogue>
+			<Page>You got it hatchling. When you’re ready, just say the word.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Farewell</Name>
+		<EntryCondition>JamSessionIsOver</EntryCondition>
+		<Dialogue>
+			<Page>You cut it a little close, don’t you think?</Page>
+			<Page>Well, it worked out all right in the end, I suppose.</Page>
+			<Page>Ahh, I hope there are beasties in the next one.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

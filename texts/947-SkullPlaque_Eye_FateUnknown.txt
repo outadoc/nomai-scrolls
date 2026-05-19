@@ -1,0 +1,11 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>The Nomai who came to our solar system were following a signal from the Eye of the universe.</Page>
+			<Page>We never figured out how they died.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

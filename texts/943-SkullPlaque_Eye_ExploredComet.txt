@@ -1,0 +1,11 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>The Nomai who came to our solar system were following a signal from the Eye of the universe.</Page>
+			<Page>They perished when the Interloper arrived, bringing with it the deadly substance we called ghost matter that flooded the entire solar system almost instantly and without warning.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

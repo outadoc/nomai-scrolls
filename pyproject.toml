@@ -1,0 +1,10 @@
+[project]
+name = "extract-rows"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4",
+]
+
+[tool.setuptools]
+packages = []

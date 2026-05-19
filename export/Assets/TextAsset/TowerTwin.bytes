@@ -1,0 +1,67 @@
+<AstroObjectEntry>
+	<ID>TOWER_TWIN</ID>
+
+	<Entry>
+		<ID>TT_WARP_TOWERS</ID>
+		<Name>Ash Twin Towers</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+		
+		<ExploreFact>
+			<ID>TT_WARP_TOWERS_X1</ID>
+			<Text>Several large Nomai towers form a ring around Ash Twin's equator.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TT_WARP_TOWERS_X2</ID>
+			<Text>The White Hole Station was used as a model for these towers, which were built for the Ash Twin Project.</Text>
+		</ExploreFact>
+	</Entry>
+
+	<Entry>
+		<ID>TT_TIME_LOOP_DEVICE</ID>
+		<Name>Ash Twin Project</Name>
+		<Curiosity>TIME_LOOP</Curiosity>
+		<IsCuriosity/>
+
+		<RumorFact>
+			<ID>TT_TIME_LOOP_DEVICE_R1</ID>
+			<SourceID>TH_NOMAI_MINE</SourceID>
+			<Text>The central chamber inside Ash Twin was physically sealed off by an immensely thick protective shell.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>TT_TIME_LOOP_DEVICE_R2</ID>
+			<SourceID>CT_HIGH_ENERGY_LAB</SourceID>
+			<Text>The Nomai planned to construct technology capable of producing a 22-minute negative time interval on Ash Twin.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>TT_TIME_LOOP_DEVICE_R3</ID>
+			<SourceID>GD_STATUE_WORKSHOP</SourceID>
+			<Text>Every memory recorded by a Nomai statue is transmitted to a corresponding storage unit within Ash Twin.</Text>
+		</RumorFact>
+		<RumorFact>
+			<ID>TT_TIME_LOOP_DEVICE_R4</ID>
+			<SourceID>BH_BLACK_HOLE_FORGE</SourceID>
+			<Text>An advanced warp core was approved for installation in the central chamber of Ash Twin.</Text>
+		</RumorFact>
+
+		<ExploreFact>
+			<ID>TT_TIME_LOOP_DEVICE_X1</ID>
+			<Text>A hollowed-out chamber inside Ash Twin. The energy cables from the surface are plugged into a protective casing at the center of the planet.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TT_TIME_LOOP_DEVICE_X2</ID>
+			<Text>There are eight monoliths with Nomai masks attached. Three of the masks are actively receiving data from the Probe Tracking Module, Giant's Deep, and Timber Hearth respectively.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TT_TIME_LOOP_DEVICE_X3</ID>
+			<Text>The Ash Twin Project was designed to use the energy from a supernova (triggered by the Sun Station) to send probe data from the Orbital Probe Cannon 22 minutes into the past.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TT_TIME_LOOP_DEVICE_X4</ID>
+			<Text>The Sun Station did not work. Although the Ash Twin Project was theoretically sound, the Nomai were unable to power it.</Text>
+		</ExploreFact>
+		<ExploreFact>
+			<ID>TT_TIME_LOOP_DEVICE_X5</ID>
+			<Text>There is an advanced warp core inside the protective casing at the center of the planet. Removing the core will disable the Ash Twin Project.</Text>
+		</ExploreFact>
+	</Entry>
+</AstroObjectEntry> 

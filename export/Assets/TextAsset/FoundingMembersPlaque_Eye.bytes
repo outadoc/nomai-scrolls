@@ -1,0 +1,10 @@
+<DialogueTree>
+	<NameField>SIGN</NameField>
+	<DialogueNode>
+		<Name>Sign</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Outer Wilds Ventures was founded by Feldspar, Gossan, Slate, and Hornfels to explore a solar system at the end of the universe.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

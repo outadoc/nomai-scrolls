@@ -1,0 +1,56 @@
+<DialogueTree>
+	<NameField>Gabbro</NameField>
+	
+	<DialogueNode>
+		<Name>WaitingForOthers</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Hey, time pal. So you’re getting the band back together, huh?</Page>
+			<Page>Go on, go find the others. I’ll be here. You don’t need me yet, but you will.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ReadyToPlay</Name>
+		<EntryCondition>AllTravelersGathered</EntryCondition>
+		<Dialogue>
+			<Page>What do you say, time buddy? Ready to start the music?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes.</Text>
+				<DialogueTarget>StartPlaying</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Not yet.</Text>
+				<DialogueTarget>NotYet</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>StartPlaying</Name>
+		<Dialogue>
+			<Page>Heh, this should be cool.</Page>
+		</Dialogue>
+		<SetCondition>IsGabbroPlaying</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>NotYet</Name>
+		<Dialogue>
+			<Page>No rush, I’m not going anywhere.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Farewell</Name>
+		<EntryCondition>JamSessionIsOver</EntryCondition>
+		<Dialogue>
+			<Page>I tell you what, this has been really fun. And I got to help make something pretty cool, so I’ve got no complaints.</Page>
+			<Page>I mean, not me, exactly, but close enough.</Page>
+			<Page>It’s the kind of thing that makes you glad you stopped and smelled the pine trees along the way, you know?</Page>
+		</Dialogue>
+	</DialogueNode>
+
+</DialogueTree>

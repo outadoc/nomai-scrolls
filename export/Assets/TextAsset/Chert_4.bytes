@@ -1,0 +1,101 @@
+<DialogueTree>
+	<NameField>Chert</NameField>
+
+<!-- 
+	Horrified but calm Chert! This should sync up with the start of the end-of-loop music.
+-->
+
+	<DialogueNode>
+		<Name>ChertIntro</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Oh, hello...</Page>
+		</Dialogue>
+		<RevealFacts>
+			<FactID>CT_CHERT_X1</FactID>
+			<FactID>CT_CHERT_X5</FactID>
+		</RevealFacts>
+		<DialogueTarget>Questions</DialogueTarget>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Questions</Name>
+		<Dialogue>
+			<Page>Come, sit with me, my fellow traveler. Let’s sit together and watch the stars die.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Sure, why not.</Text>
+				<DialogueTarget>Chert1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>LOOP_COUNT_GOE_2</RequiredCondition>
+				<Text>If it helps, we’re in a time loop, so we won’t really die.</Text>
+				<DialogueTarget>Chert2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>No, thanks.</Text>
+				<DialogueTarget>Chert3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert1</Name>
+		<Dialogue>
+			<Page>We only get so much time, don’t we? Ah, there was still more I wanted to do...</Page>
+			<Page>How unlucky to have been born at the end of the universe.</Page>
+		</Dialogue>
+		<SetCondition>Secondary1</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert2</Name>
+		<Dialogue>
+			<Page>Ah, that’s a lovely thought. Is that how you’re coping with this?</Page>
+			<Page>Does it help?</Page>
+		</Dialogue>
+		<SetCondition>Secondary2</SetCondition>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Chert3</Name>
+		<Dialogue>
+			<Page>Perhaps you’re right. ...Yes, we should face this alone. That’s the way.</Page>
+			<Page>We enter this world alone, and we leave it alone...</Page>
+		</Dialogue>
+		<SetCondition>Secondary1</SetCondition>
+	</DialogueNode>
+
+<!--
+	CHERT POST-INTRO TEXT
+-->
+
+	<DialogueNode>
+		<Name>ChertSecondary1</Name>
+		<EntryCondition>Secondary1</EntryCondition>
+		<Dialogue>
+			<Page>Any minute now...</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>ChertSecondary2</Name>
+		<EntryCondition>Secondary2</EntryCondition>
+		<Dialogue>
+			<Page>A time loop, you said? I like that idea...</Page>
+		</Dialogue>
+	</DialogueNode>
+
+<!--
+	Text option for players who haven’t seen the sun explode yet:
+
+	<Page>Oh, hello...</Page>
+	<Page>If only you’d come here earlier. But there’s no time now...</Page>
+
+	(If you talk to Chert again)
+	<Page>There’s no time at all...</Page>
+
+-->
+
+</DialogueTree>
