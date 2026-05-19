@@ -1,0 +1,64 @@
+import sqlite3
+from dataclasses import dataclass
+from pathlib import Path
+from xml.etree import ElementTree
+
+
+@dataclass
+class TextBlock:
+    block_id: int
+    parent_block_id: int | None
+    text: str
+    default_font_override: bool
+
+
+def _parse_stem(stem: str) -> tuple[int, str]:
+    # e.g. "7565-BH_City_Forum_2" → (7565, "BH_City_Forum_2")
+    file_id_str, name = stem.split("-", 1)
+    return int(file_id_str), name
+
+
+def parse_file(path: Path) -> tuple[int, str, list[TextBlock]]:
+    file_id, name = _parse_stem(path.stem)
+    tree = ElementTree.parse(path)
+    blocks = []
+    for tb in tree.iterfind("TextBlock"):
+        id_el = tb.find("ID")
+        if id_el is None or id_el.text is None:
+            continue
+        block_id = int(id_el.text.strip())
+
+        parent_el = tb.find("ParentID")
+        parent_block_id = int(parent_el.text.strip()) if parent_el is not None and parent_el.text else None
+
+        # itertext() handles mixed content: plain text, CDATA, and inline tags like <em>
+        text_el = tb.find("Text")
+        text = "".join(text_el.itertext()).strip() if text_el is not None else ""
+
+        default_font_override = tb.find("DefaultFontOverride") is not None
+
+        blocks.append(TextBlock(block_id, parent_block_id, text, default_font_override))
+
+    return file_id, name, blocks
+
+
+def load_all(conn: sqlite3.Connection, xml_dir: Path) -> int:
+    total = 0
+    for path in sorted(xml_dir.glob("*.xml")):
+        file_id, name, blocks = parse_file(path)
+        conn.execute(
+            "INSERT OR IGNORE INTO dialogue_files (file_id, name) VALUES (?, ?)",
+            (file_id, name),
+        )
+        conn.executemany(
+            """INSERT OR IGNORE INTO text_blocks
+               (file_id, block_id, parent_block_id, text, default_font_override)
+               VALUES (?, ?, ?, ?, ?)""",
+            (
+                (file_id, b.block_id, b.parent_block_id, b.text, int(b.default_font_override))
+                for b in blocks
+            ),
+        )
+        total += len(blocks)
+    conn.commit()
+    return total
