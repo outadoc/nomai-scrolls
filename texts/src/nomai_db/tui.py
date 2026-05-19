@@ -1,15 +1,28 @@
 import argparse
 import re
 import sqlite3
-import textwrap
 from dataclasses import dataclass
 from pathlib import Path
 
-from rich.markup import escape
+from rich.console import Console
+from rich.text import Text
 from textual.app import App, ComposeResult
 from textual.binding import Binding
 from textual.containers import VerticalScroll
 from textual.widgets import Footer, Header, Label, ListItem, ListView, Static
+
+_CONSOLE = Console(width=9999, highlight=False)
+
+_COLOR_MAP: dict[str, str] = {
+    "black":     "bright_black",
+    "grey":      "bright_black",
+    "lightblue": "bright_cyan",
+    "orange":    "orange1",
+    "red":       "bright_red",
+}
+
+_COLOR_RE = re.compile(r"<color=([^\n>]+)>(.*?)</color>", re.DOTALL)
+_TAG_RE   = re.compile(r"<[^>]*>")
 
 
 @dataclass
@@ -20,7 +33,22 @@ class Block:
 
 
 def _strip_tags(text: str) -> str:
-    return re.sub(r"<[^>]+>", "", text).replace("\\n", "\n").strip()
+    return _TAG_RE.sub("", text).replace("\\n", " ").strip()
+
+
+def _parse_text(raw: str) -> Text:
+    raw = raw.replace("\\n", "\n")
+    result = Text()
+    pos = 0
+    for m in _COLOR_RE.finditer(raw):
+        if m.start() > pos:
+            result.append(_TAG_RE.sub("", raw[pos:m.start()]))
+        color = _COLOR_MAP.get(m.group(1).lower(), m.group(1))
+        result.append(_TAG_RE.sub("", m.group(2)), style=color)
+        pos = m.end()
+    if pos < len(raw):
+        result.append(_TAG_RE.sub("", raw[pos:]))
+    return result
 
 
 def _render_tree(
@@ -28,46 +56,40 @@ def _render_tree(
     lang: str,
     translations: dict[tuple[str, str], str],
     width: int = 80,
-) -> str:
+) -> Text:
     children: dict[int | None, list[Block]] = {}
     for b in blocks:
         children.setdefault(b.parent_block_id, []).append(b)
 
-    lines: list[str] = []
+    result = Text()
 
-    def wrap(text: str, first_prefix: str, cont_prefix: str) -> list[str]:
-        result: list[str] = []
-        for source_line in (text.splitlines() or [""]):
-            # First segment of this source line uses first_prefix width budget
-            budget = max(10, width - len(first_prefix))
-            segments = textwrap.wrap(source_line, width=budget) or [""]
-            for i, seg in enumerate(segments):
-                pfx = first_prefix if (not result and i == 0) else cont_prefix
-                result.append(escape(pfx + seg))
-        return result
+    def add_block(first_prefix: str, cont_prefix: str, content: Text) -> None:
+        available = max(10, width - len(first_prefix))
+        for j, line in enumerate(content.wrap(_CONSOLE, available)):
+            result.append(first_prefix if j == 0 else cont_prefix, style="dim")
+            result.append_text(line)
+            result.append("\n")
 
     def render(parent_id: int | None, prefix: str) -> None:
         siblings = children.get(parent_id, [])
         for i, b in enumerate(siblings):
             is_last = i == len(siblings) - 1
-            text = _strip_tags(translations.get((lang, b.text), b.text))
+            content = _parse_text(translations.get((lang, b.text), b.text))
 
             if parent_id is None:
                 if i > 0:
-                    lines.append("")
-                lines.extend(wrap(text, "", ""))
+                    result.append("\n")
+                add_block("", "", content)
                 render(b.block_id, "")
             else:
-                connector = "└── " if is_last else "├── "
+                connector    = "└── " if is_last else "├── "
                 continuation = "    " if is_last else "│   "
-                child_prefix = prefix + continuation
-                lines.extend(wrap(text, prefix + connector, prefix + continuation))
-                render(b.block_id, child_prefix)
+                add_block(prefix + connector, prefix + continuation, content)
+                render(b.block_id, prefix + continuation)
 
     render(None, "")
-    while lines and not lines[-1].strip():
-        lines.pop()
-    return "\n".join(lines)
+    result.rstrip()
+    return result
 
 
 class NomaiApp(App):
@@ -143,7 +165,7 @@ class NomaiApp(App):
         scroll = self.query_one(VerticalScroll)
         width = scroll.content_size.width or self.size.width
         content = _render_tree(blocks, self._current_lang(), self._translations, width=width)
-        self.query_one("#tree", Static).update(content or "(no content)")
+        self.query_one("#tree", Static).update(content if content.plain else "(no content)")
 
     def on_list_view_highlighted(self, _: ListView.Highlighted) -> None:
         self._update_tree()
