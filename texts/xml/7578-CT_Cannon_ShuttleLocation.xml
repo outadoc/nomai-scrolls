@@ -1,6 +1,0 @@
-<NomaiObject>
-	<TextBlock>
-			<ID>1</ID>
-			<Text>The <![CDATA[<color=orange>shuttle</color>]]> is currently resting at the <![CDATA[<color=lightblue>comet</color>]]>.</Text>
-	</TextBlock>
-</NomaiObject>
