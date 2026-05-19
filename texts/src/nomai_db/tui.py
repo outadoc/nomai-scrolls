@@ -37,7 +37,7 @@ def _strip_tags(text: str) -> str:
 
 
 def _parse_text(raw: str) -> Text:
-    raw = raw.replace("\\n", "\n")
+    raw = re.sub(r"\\+n", "\n", raw, flags=re.IGNORECASE)
     result = Text()
     pos = 0
     for m in _COLOR_RE.finditer(raw):
