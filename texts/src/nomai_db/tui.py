@@ -30,6 +30,11 @@ class Block:
     block_id: int
     parent_block_id: int | None
     text: str
+    speaker: str | None
+
+
+def _strip_speaker(text: str, speaker: str) -> str:
+    return re.sub(rf"^{re.escape(speaker)}\s*:\s*", "", text, count=1)
 
 
 def _strip_tags(text: str) -> str:
@@ -63,28 +68,40 @@ def _render_tree(
 
     result = Text()
 
-    def add_block(first_prefix: str, cont_prefix: str, content: Text) -> None:
-        available = max(10, width - len(first_prefix))
-        for j, line in enumerate(content.wrap(_CONSOLE, available)):
-            result.append(first_prefix if j == 0 else cont_prefix, style="dim")
-            result.append_text(line)
-            result.append("\n")
+    def add_block(first_prefix: str, cont_prefix: str, content: Text, speaker: str | None = None) -> None:
+        if speaker:
+            result.append(first_prefix, style="dim")
+            result.append(speaker + "\n", style="bold")
+            available = max(10, width - len(cont_prefix))
+            for line in content.wrap(_CONSOLE, available):
+                result.append(cont_prefix, style="dim")
+                result.append_text(line)
+                result.append("\n")
+        else:
+            available = max(10, width - len(first_prefix))
+            for j, line in enumerate(content.wrap(_CONSOLE, available)):
+                result.append(first_prefix if j == 0 else cont_prefix, style="dim")
+                result.append_text(line)
+                result.append("\n")
 
     def render(parent_id: int | None, prefix: str) -> None:
         siblings = children.get(parent_id, [])
         for i, b in enumerate(siblings):
             is_last = i == len(siblings) - 1
-            content = _parse_text(translations.get((lang, b.text), b.text))
+            raw = translations.get((lang, b.text), b.text)
+            if b.speaker:
+                raw = _strip_speaker(raw, b.speaker)
+            content = _parse_text(raw)
 
             if parent_id is None:
                 if i > 0:
                     result.append("\n")
-                add_block("", "", content)
+                add_block("", "", content, speaker=b.speaker)
                 render(b.block_id, "")
             else:
                 connector    = "└── " if is_last else "├── "
                 continuation = "    " if is_last else "│   "
-                add_block(prefix + connector, prefix + continuation, content)
+                add_block(prefix + connector, prefix + continuation, content, speaker=b.speaker)
                 render(b.block_id, prefix + continuation)
 
     render(None, "")
@@ -125,12 +142,12 @@ class NomaiApp(App):
                 r[0] for r in conn.execute("SELECT name FROM dialogue_files ORDER BY name")
             ]
             self._file_blocks: dict[str, list[Block]] = {name: [] for name in self._files}
-            for name, block_id, parent_block_id, text in conn.execute("""
-                SELECT df.name, tb.block_id, tb.parent_block_id, tb.text
+            for name, block_id, parent_block_id, text, speaker in conn.execute("""
+                SELECT df.name, tb.block_id, tb.parent_block_id, tb.text, tb.speaker
                 FROM text_blocks tb JOIN dialogue_files df USING (file_id)
                 ORDER BY df.name, tb.block_id
             """):
-                self._file_blocks[name].append(Block(block_id, parent_block_id, text))
+                self._file_blocks[name].append(Block(block_id, parent_block_id, text, speaker))
 
             self._translations: dict[tuple[str, str], str] = {
                 (lang, key): value

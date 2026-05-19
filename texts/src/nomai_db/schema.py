@@ -27,7 +27,12 @@ def init_db(conn: sqlite3.Connection) -> None:
             parent_block_id       INTEGER,
             text                  TEXT NOT NULL,
             default_font_override INTEGER NOT NULL DEFAULT 0,
+            speaker               TEXT,
             UNIQUE (file_id, block_id)
         );
     """)
+    try:
+        conn.execute("ALTER TABLE text_blocks ADD COLUMN speaker TEXT")
+    except sqlite3.OperationalError:
+        pass  # column already exists
     conn.commit()

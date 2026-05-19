@@ -1,7 +1,10 @@
+import re
 import sqlite3
 from dataclasses import dataclass
 from pathlib import Path
 from xml.etree import ElementTree
+
+_SPEAKER_RE = re.compile(r"^([A-Z][A-Z ]+):\s")
 
 
 @dataclass
@@ -10,6 +13,7 @@ class TextBlock:
     parent_block_id: int | None
     text: str
     default_font_override: bool
+    speaker: str | None
 
 
 def _parse_stem(stem: str) -> tuple[int, str]:
@@ -37,7 +41,10 @@ def parse_file(path: Path) -> tuple[int, str, list[TextBlock]]:
 
         default_font_override = tb.find("DefaultFontOverride") is not None
 
-        blocks.append(TextBlock(block_id, parent_block_id, text, default_font_override))
+        m = _SPEAKER_RE.match(text)
+        speaker = m.group(1).rstrip() if m else None
+
+        blocks.append(TextBlock(block_id, parent_block_id, text, default_font_override, speaker))
 
     return file_id, name, blocks
 
@@ -52,10 +59,10 @@ def load_all(conn: sqlite3.Connection, xml_dir: Path) -> int:
         )
         conn.executemany(
             """INSERT OR IGNORE INTO text_blocks
-               (file_id, block_id, parent_block_id, text, default_font_override)
-               VALUES (?, ?, ?, ?, ?)""",
+               (file_id, block_id, parent_block_id, text, default_font_override, speaker)
+               VALUES (?, ?, ?, ?, ?, ?)""",
             (
-                (file_id, b.block_id, b.parent_block_id, b.text, int(b.default_font_override))
+                (file_id, b.block_id, b.parent_block_id, b.text, int(b.default_font_override), b.speaker)
                 for b in blocks
             ),
         )
