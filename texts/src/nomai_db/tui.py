@@ -1,6 +1,7 @@
 import argparse
 import re
 import sqlite3
+import textwrap
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -26,6 +27,7 @@ def _render_tree(
     blocks: list[Block],
     lang: str,
     translations: dict[tuple[str, str], str],
+    width: int = 80,
 ) -> str:
     children: dict[int | None, list[Block]] = {}
     for b in blocks:
@@ -33,19 +35,39 @@ def _render_tree(
 
     lines: list[str] = []
 
-    def render(parent_id: int | None, depth: int) -> None:
-        for b in children.get(parent_id, []):
-            text = _strip_tags(translations.get((lang, b.text), b.text))
-            prefix = "  " * (depth - 1) + "↳ " if depth > 0 else ""
-            continuation_indent = "  " * depth
-            text_lines = text.splitlines() or [""]
-            for i, line in enumerate(text_lines):
-                lines.append(escape((prefix if i == 0 else continuation_indent) + line))
-            lines.append("")
-            render(b.block_id, depth + 1)
+    def wrap(text: str, first_prefix: str, cont_prefix: str) -> list[str]:
+        result: list[str] = []
+        for source_line in (text.splitlines() or [""]):
+            # First segment of this source line uses first_prefix width budget
+            budget = max(10, width - len(first_prefix))
+            segments = textwrap.wrap(source_line, width=budget) or [""]
+            for i, seg in enumerate(segments):
+                pfx = first_prefix if (not result and i == 0) else cont_prefix
+                result.append(escape(pfx + seg))
+        return result
 
-    render(None, 0)
-    return "\n".join(lines).strip()
+    def render(parent_id: int | None, prefix: str) -> None:
+        siblings = children.get(parent_id, [])
+        for i, b in enumerate(siblings):
+            is_last = i == len(siblings) - 1
+            text = _strip_tags(translations.get((lang, b.text), b.text))
+
+            if parent_id is None:
+                if i > 0:
+                    lines.append("")
+                lines.extend(wrap(text, "", ""))
+                render(b.block_id, "")
+            else:
+                connector = "└── " if is_last else "├── "
+                continuation = "    " if is_last else "│   "
+                child_prefix = prefix + continuation
+                lines.extend(wrap(text, prefix + connector, prefix + continuation))
+                render(b.block_id, child_prefix)
+
+    render(None, "")
+    while lines and not lines[-1].strip():
+        lines.pop()
+    return "\n".join(lines)
 
 
 class NomaiApp(App):
@@ -118,10 +140,15 @@ class NomaiApp(App):
         if idx is None or idx >= len(self._files):
             return
         blocks = self._file_blocks[self._files[idx]]
-        content = _render_tree(blocks, self._current_lang(), self._translations)
+        scroll = self.query_one(VerticalScroll)
+        width = scroll.content_size.width or self.size.width
+        content = _render_tree(blocks, self._current_lang(), self._translations, width=width)
         self.query_one("#tree", Static).update(content or "(no content)")
 
     def on_list_view_highlighted(self, _: ListView.Highlighted) -> None:
+        self._update_tree()
+
+    def on_resize(self, _) -> None:
         self._update_tree()
 
     def action_next_lang(self) -> None:
