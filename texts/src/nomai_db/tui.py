@@ -33,9 +33,6 @@ class Block:
     speaker: str | None
 
 
-def _strip_speaker(text: str, speaker: str) -> str:
-    return re.sub(rf"^{re.escape(speaker)}\s*:\s*", "", text, count=1)
-
 
 def _strip_tags(text: str) -> str:
     return _TAG_RE.sub("", text).replace("\\n", " ").strip()
@@ -71,7 +68,7 @@ def _render_tree(
     def add_block(first_prefix: str, cont_prefix: str, content: Text, speaker: str | None = None) -> None:
         if speaker:
             result.append(first_prefix, style="dim")
-            result.append(speaker + "\n", style="bold")
+            result.append(speaker + "\n", style="bold underline")
             available = max(10, width - len(cont_prefix))
             for line in content.wrap(_CONSOLE, available):
                 result.append(cont_prefix, style="dim")
@@ -88,10 +85,7 @@ def _render_tree(
         siblings = children.get(parent_id, [])
         for i, b in enumerate(siblings):
             is_last = i == len(siblings) - 1
-            raw = translations.get((lang, b.text), b.text)
-            if b.speaker:
-                raw = _strip_speaker(raw, b.speaker)
-            content = _parse_text(raw)
+            content = _parse_text(translations.get((lang, b.text), b.text))
 
             if parent_id is None:
                 if i > 0:

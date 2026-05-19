@@ -1,6 +1,9 @@
+import re
 import sqlite3
 from pathlib import Path
 from xml.etree import ElementTree
+
+_SPEAKER_RE = re.compile(r"^[A-Z][A-Z ]+\s*:\s*")
 
 
 def _lang_from_stem(stem: str) -> str:
@@ -17,8 +20,8 @@ def parse_file(path: Path) -> tuple[str, list[tuple[str, str]]]:
         val_el = entry.find("value")
         if key_el is None or val_el is None:
             continue
-        key = (key_el.text or "").strip()
-        value = (val_el.text or "").strip()
+        key = _SPEAKER_RE.sub("", (key_el.text or "").strip(), count=1)
+        value = _SPEAKER_RE.sub("", (val_el.text or "").strip(), count=1)
         if key:
             entries.append((key, value))
     return lang, entries

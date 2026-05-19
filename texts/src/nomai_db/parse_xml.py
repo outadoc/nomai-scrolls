@@ -43,6 +43,8 @@ def parse_file(path: Path) -> tuple[int, str, list[TextBlock]]:
 
         m = _SPEAKER_RE.match(text)
         speaker = m.group(1).rstrip() if m else None
+        if m:
+            text = text[m.end():]
 
         blocks.append(TextBlock(block_id, parent_block_id, text, default_font_override, speaker))
 
