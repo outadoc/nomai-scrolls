@@ -1,24 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ lang }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Nomai Texts{% endblock %}</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'media' }</script>
-  <style>em { font-style: italic; }</style>
-</head>
-<body class="bg-gray-50 text-gray-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans text-sm leading-normal min-h-screen">
-  <header class="bg-white border-b border-gray-200 dark:bg-zinc-900 dark:border-zinc-800 px-5 py-2 sticky top-0 z-10 flex items-center gap-4">
-    <a href="{{ home_path }}" class="text-orange-600 dark:text-orange-500 font-bold text-lg italic no-underline shrink-0 hover:opacity-80">r/NomaiTexts</a>
-    <nav class="flex flex-wrap gap-1 ml-auto">
-      {% for code, url in lang_links %}
-      <a href="{{ url }}" class="no-underline text-xs px-2 py-0.5 rounded border {% if code == lang %}text-orange-600 dark:text-orange-500 font-semibold border-orange-500{% else %}text-gray-500 dark:text-zinc-400 border-transparent hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800{% endif %}">{{ code }}</a>
-      {% endfor %}
-    </nav>
-  </header>
-  <main class="max-w-2xl mx-auto my-6 px-3">
-    {% block content %}{% endblock %}
-  </main>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}Nomai Texts{% endblock %}</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = { darkMode: "media" };
+        </script>
+        <style>
+            em {
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-gray-50 text-gray-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans text-sm leading-normal min-h-screen"
+    >
+        <header
+            class="bg-white border-b border-gray-200 dark:bg-zinc-900 dark:border-zinc-800 px-5 py-2 sticky top-0 z-10 flex items-center gap-4"
+        >
+            <a
+                href="{{ home_path }}"
+                class="text-orange-600 dark:text-orange-500 font-bold text-lg italic no-underline shrink-0 hover:opacity-80"
+                >r/NomaiTexts</a
+            >
+            <nav class="flex flex-wrap gap-1 ml-auto">
+                {% for code, url in lang_links %}
+                <a
+                    href="{{ url }}"
+                    class="no-underline text-xs px-2 py-0.5 rounded border {% if code == lang %}text-orange-600 dark:text-orange-500 font-semibold border-orange-500{% else %}text-gray-500 dark:text-zinc-400 border-transparent hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800{% endif %}"
+                    >{{ code }}</a
+                >
+                {% endfor %}
+            </nav>
+        </header>
+        <main class="max-w-2xl mx-auto my-6 px-3">
+            {% block content %}{% endblock %}
+        </main>
+        <div
+            id="spoiler-overlay"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden"
+        >
+            <div
+                class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 rounded-xl shadow-2xl max-w-sm w-full mx-4 p-6 flex flex-col gap-4"
+            >
+                <h2
+                    class="text-lg font-semibold text-gray-900 dark:text-zinc-100"
+                >
+                    Spoiler warning
+                </h2>
+                <p
+                    class="text-sm text-gray-600 dark:text-zinc-400 leading-relaxed"
+                >
+                    This site contains the full Nomai dialogue from
+                    <em>Outer Wilds</em>, including text from late-game areas.
+                    Proceed only if you have finished the game or don't mind
+                    spoilers.
+                </p>
+                <button
+                    onclick="dismissSpoilerWarning()"
+                    class="mt-1 self-end bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer"
+                >
+                    I understand
+                </button>
+            </div>
+        </div>
+        <script>
+            (function () {
+                if (!localStorage.getItem("spoiler_ok")) {
+                    document
+                        .getElementById("spoiler-overlay")
+                        .classList.remove("hidden");
+                }
+            })();
+            function dismissSpoilerWarning() {
+                localStorage.setItem("spoiler_ok", "1");
+                document
+                    .getElementById("spoiler-overlay")
+                    .classList.add("hidden");
+            }
+        </script>
+    </body>
 </html>
