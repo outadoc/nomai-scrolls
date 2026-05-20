@@ -39,6 +39,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .site-title {
@@ -47,8 +50,27 @@ header {
     font-size: 18px;
     font-style: italic;
     text-decoration: none;
+    flex-shrink: 0;
 }
 .site-title:hover { opacity: 0.8; text-decoration: none; }
+
+.lang-selector {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.lang-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+.lang-link:hover { color: var(--text); background: var(--border); text-decoration: none; }
+.lang-link.active { color: var(--accent); font-weight: 700; border-color: var(--accent); }
 
 main {
     max-width: 740px;
@@ -185,10 +207,14 @@ def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[Comm
     return children_map.get(None, [])
 
 
-def generate(db_path: Path, out_dir: Path, lang: str) -> None:
+def generate(db_path: Path, out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     with sqlite3.connect(db_path) as conn:
+        languages: list[str] = [
+            r[0] for r in conn.execute("SELECT code FROM languages ORDER BY code")
+        ]
+
         file_names: list[str] = [
             r[0] for r in conn.execute("SELECT name FROM dialogue_files ORDER BY name")
         ]
@@ -201,12 +227,9 @@ def generate(db_path: Path, out_dir: Path, lang: str) -> None:
         """):
             file_blocks[name].append(_Block(block_id, parent_block_id, text, speaker))
 
-        translations: dict[str, str] = {
-            key: value
-            for key, value in conn.execute(
-                "SELECT key, value FROM translations WHERE lang = ?", (lang,)
-            )
-        }
+        all_translations: dict[str, dict[str, str]] = {}
+        for lang_code, key, value in conn.execute("SELECT lang, key, value FROM translations"):
+            all_translations.setdefault(lang_code, {})[key] = value
 
     env = Environment(
         loader=PackageLoader("nomai_web", "templates"),
@@ -214,38 +237,59 @@ def generate(db_path: Path, out_dir: Path, lang: str) -> None:
     )
 
     posts = [
-        Post(
-            name=name,
-            display_name=_display_name(name),
-            block_count=len(file_blocks[name]),
-        )
+        Post(name=name, display_name=_display_name(name), block_count=len(file_blocks[name]))
         for name in file_names
     ]
 
     (out_dir / "style.css").write_text(_CSS, encoding="utf-8")
 
-    index_tmpl = env.get_template("index.html")
+    # Root index: redirect to English (or first available language)
+    default_lang = "en" if "en" in languages else languages[0]
     (out_dir / "index.html").write_text(
-        index_tmpl.render(posts=posts, lang=lang, css_path="style.css", root_path="./"),
+        f'<!DOCTYPE html><html><head><meta charset="utf-8">'
+        f'<meta http-equiv="refresh" content="0;url={default_lang}/index.html">'
+        f'</head><body></body></html>\n',
         encoding="utf-8",
     )
-    print(f"  index.html ({len(posts)} posts)")
 
+    index_tmpl = env.get_template("index.html")
     post_tmpl = env.get_template("post.html")
-    for name in file_names:
-        tree = _build_tree(file_blocks[name], translations)
-        post_dir = out_dir / name
-        post_dir.mkdir(exist_ok=True)
-        (post_dir / "index.html").write_text(
-            post_tmpl.render(
-                display_name=_display_name(name),
-                tree=tree,
+
+    for lang in languages:
+        translations = all_translations.get(lang, {})
+        lang_dir = out_dir / lang
+        lang_dir.mkdir(exist_ok=True)
+
+        lang_links = [(code, f"../{code}/index.html") for code in languages]
+
+        (lang_dir / "index.html").write_text(
+            index_tmpl.render(
+                posts=posts,
                 lang=lang,
+                lang_links=lang_links,
                 css_path="../style.css",
-                root_path="../",
+                home_path="../index.html",
             ),
             encoding="utf-8",
         )
 
-    print(f"  {len(file_names)} post pages")
+        for name in file_names:
+            tree = _build_tree(file_blocks[name], translations)
+            post_dir = lang_dir / name
+            post_dir.mkdir(exist_ok=True)
+            (post_dir / "index.html").write_text(
+                post_tmpl.render(
+                    display_name=_display_name(name),
+                    tree=tree,
+                    lang=lang,
+                    lang_links=[(code, f"../../{code}/{name}/index.html") for code in languages],
+                    css_path="../../style.css",
+                    home_path="../../index.html",
+                    feed_path="../index.html",
+                ),
+                encoding="utf-8",
+            )
+
+        print(f"  {lang}: {len(file_names)} pages")
+
     print(f"\nDone → {out_dir}/")

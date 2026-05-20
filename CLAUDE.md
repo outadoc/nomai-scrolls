@@ -41,9 +41,8 @@ cd import && python -m nomai_import --db ../nomai.db
 # Launch the TUI (run from repo root)
 nomai-db-tui --db nomai.db
 
-# Generate static HTML site (run from repo root)
+# Generate static HTML site for all languages (run from repo root)
 nomai-web generate --db nomai.db --out out
-nomai-web generate --db nomai.db --out out --lang fr  # other codes: es, de, zh, jp, …
 
 # Generate and serve for local development
 nomai-web serve --db nomai.db             # → http://localhost:8000/
@@ -105,7 +104,8 @@ Built with [Textual](https://github.com/Textualize/textual). All data is loaded 
 Reads from `nomai.db`, writes a self-contained static site to `--out` (default `out/`).
 
 - `render.py` — `text_to_html()` mirrors the TUI's `_parse_text()`: handles `\\n` escapes, maps `<color=name>…</color>` to `<span style="color:…">`, and wraps everything in `html.escape()`
-- `site.py` — queries DB, builds `CommentNode` trees (same `parent_block_id` → children logic as the TUI), renders Jinja2 templates, writes `index.html` + one `{name}/index.html` per dialogue file
-- `templates/` — `base.html` (shell), `index.html` (feed), `post.html` (recursive `render_comment` macro for nested replies)
-- CSS lives inline in `site.py` as `_CSS` and is written to `out/style.css`; post pages reference it as `../style.css`
+- `site.py` — queries DB, builds `CommentNode` trees (same `parent_block_id` → children logic as the TUI), renders Jinja2 templates for all languages; output layout is `out/{lang}/index.html` + `out/{lang}/{name}/index.html`; `out/index.html` redirects to English
+- `templates/` — `base.html` (shell with lang selector nav), `index.html` (feed), `post.html` (recursive `render_comment` macro for nested replies)
+- CSS lives inline in `site.py` as `_CSS` and is written to `out/style.css`
 - `body_html` fields are `markupsafe.Markup` objects so Jinja2's autoescape doesn't re-escape already-rendered HTML
+- Lang selector links use relative paths (`../../{lang}/{name}/index.html`) so the site works without a server

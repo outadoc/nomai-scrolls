@@ -19,12 +19,6 @@ def _add_common_args(parser: argparse.ArgumentParser) -> None:
         metavar="DIR",
         help="output directory for generated HTML",
     )
-    parser.add_argument(
-        "--lang",
-        default="en",
-        metavar="CODE",
-        help="language code for translations",
-    )
 
 
 def main() -> None:
@@ -57,7 +51,7 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    site.generate(db_path=Path(args.db), out_dir=Path(args.out), lang=args.lang)
+    site.generate(db_path=Path(args.db), out_dir=Path(args.out))
 
     if args.command == "serve":
         handler = functools.partial(
