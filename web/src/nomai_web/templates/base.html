@@ -22,10 +22,16 @@
         >
             <a
                 href="{{ home_path }}"
-                class="text-orange-600 dark:text-orange-500 font-bold text-lg italic no-underline shrink-0 hover:opacity-80"
-                >r/NomaiTexts</a
+                class="text-orange-600 dark:text-orange-500 font-bold text-lg no-underline shrink-0 hover:opacity-80"
+                >Nomai Scrolls</a
             >
             <nav class="flex flex-wrap gap-1 ml-auto">
+                <a
+                    href="https://github.com/outadoc/nomai-scrolls"
+                    class="no-underline text-xs px-2 py-0.5 rounded border text-gray-500 dark:text-zinc-400 border-transparent hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800"
+                    >GitHub</a
+                >
+                <span class="w-px self-stretch bg-gray-200 dark:bg-zinc-700 mx-1"></span>
                 {% for code, url in lang_links %}
                 <a
                     href="{{ url }}"
