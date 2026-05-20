@@ -93,17 +93,6 @@ main {
 }
 .post:hover { border-color: var(--muted); }
 
-.post-score {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 36px;
-    padding-top: 2px;
-    gap: 2px;
-}
-.post-score .arrow { color: var(--accent); font-size: 18px; line-height: 1; }
-.post-score .count { color: var(--text); font-size: 12px; font-weight: 700; }
-
 .post-info { flex: 1; min-width: 0; }
 
 .post-title {
