@@ -42,11 +42,11 @@
                         id="lang-dropdown"
                         class="hidden absolute right-0 top-full mt-1 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 rounded-lg shadow-lg py-1 z-50 min-w-[5rem]"
                     >
-                        {% for code, url in lang_links %}
+                        {% for code, url, label in lang_links %}
                         <a
                             href="{{ url }}"
                             class="block px-3 py-1.5 text-xs no-underline {% if code == lang %}text-orange-600 dark:text-orange-500 font-semibold{% else %}text-gray-600 dark:text-zinc-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800{% endif %}"
-                            >{{ code }}</a
+                            >{{ label }}</a
                         >
                         {% endfor %}
                     </div>

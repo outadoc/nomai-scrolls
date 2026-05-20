@@ -33,6 +33,22 @@ class Post:
     block_count: int
 
 
+_LANG_NAMES: dict[str, str] = {
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "it": "Italiano",
+    "jp": "日本語",
+    "kr": "한국어",
+    "pl": "Polski",
+    "pt": "Português",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "zh": "中文",
+}
+
+
 def _display_name(name: str) -> str:
     return name.replace("_", " ")
 
@@ -131,7 +147,7 @@ def generate(db_path: Path, out_dir: Path) -> None:
         lang_dir = out_dir / lang
         lang_dir.mkdir(exist_ok=True)
 
-        lang_links = [(code, f"../{code}/index.html") for code in languages]
+        lang_links = [(code, f"../{code}/index.html", _LANG_NAMES.get(code, code)) for code in languages]
 
         (lang_dir / "index.html").write_text(
             index_tmpl.render(
@@ -152,7 +168,7 @@ def generate(db_path: Path, out_dir: Path) -> None:
                     display_name=_display_name(name),
                     tree=tree,
                     lang=lang,
-                    lang_links=[(code, f"../../{code}/{name}/index.html") for code in languages],
+                    lang_links=[(code, f"../../{code}/{name}/index.html", _LANG_NAMES.get(code, code)) for code in languages],
                     home_path="../../index.html",
                     feed_path="../index.html",
                 ),
