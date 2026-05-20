@@ -30,7 +30,7 @@ class CommentNode:
 class Post:
     name: str
     display_name: str
-    block_count: int
+    tree: list[CommentNode]
 
 
 _LANG_NAMES: dict[str, str] = {
@@ -125,11 +125,6 @@ def generate(db_path: Path, out_dir: Path) -> None:
         autoescape=True,
     )
 
-    posts = [
-        Post(name=name, display_name=_display_name(name), block_count=len(file_blocks[name]))
-        for name in file_names
-    ]
-
     # Root index: redirect to English (or first available language)
     default_lang = "en" if "en" in languages else languages[0]
     (out_dir / "index.html").write_text(
@@ -149,6 +144,11 @@ def generate(db_path: Path, out_dir: Path) -> None:
 
         lang_links = [(code, f"../{code}/index.html", _LANG_NAMES.get(code, code)) for code in languages]
 
+        posts = [
+            Post(name=name, display_name=_display_name(name), tree=_build_tree(file_blocks[name], translations))
+            for name in file_names
+        ]
+
         (lang_dir / "index.html").write_text(
             index_tmpl.render(
                 posts=posts,
@@ -165,6 +165,7 @@ def generate(db_path: Path, out_dir: Path) -> None:
             post_dir.mkdir(exist_ok=True)
             (post_dir / "index.html").write_text(
                 post_tmpl.render(
+                    name=name,
                     display_name=_display_name(name),
                     tree=tree,
                     lang=lang,

@@ -1,0 +1,11 @@
+{% macro render_comment(comment) %}
+<div class="border-l-2 border-gray-200 dark:border-zinc-800 pl-4 py-1 my-1">
+  {% if comment.speaker %}<div class="text-xs font-semibold mb-1 uppercase tracking-wider" style="color:{{ comment.speaker_color }}">{{ comment.speaker }}</div>{% endif %}
+  <div class="text-gray-800 dark:text-zinc-200 leading-relaxed break-words">{{ comment.body_html }}</div>
+  {% if comment.children %}
+  <div class="mt-2">
+    {% for child in comment.children %}{{ render_comment(child) }}{% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}
