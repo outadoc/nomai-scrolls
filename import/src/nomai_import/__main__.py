@@ -2,7 +2,7 @@ import argparse
 import sqlite3
 from pathlib import Path
 
-from nomai_db import parse_translations, parse_xml, schema
+from nomai_import import parse_translations, parse_xml, schema
 
 
 def main() -> None:
