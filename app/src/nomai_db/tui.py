@@ -198,8 +198,16 @@ class NomaiApp(App):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Browse Nomai dialogue texts")
-    parser.add_argument("--db", default="nomai.db")
+    parser = argparse.ArgumentParser(
+        description="Browse Nomai dialogue texts.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "--db",
+        default="nomai.db",
+        metavar="PATH",
+        help="SQLite database to read from",
+    )
     args = parser.parse_args()
     NomaiApp(Path(args.db)).run()
 

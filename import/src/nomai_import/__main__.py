@@ -6,10 +6,28 @@ from nomai_import import parse_translations, parse_xml, schema
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Parse Nomai XML files into an SQLite database")
-    parser.add_argument("--db", default="nomai.db", help="Output database path (default: nomai.db)")
-    parser.add_argument("--xml", default="xml", help="Directory containing NomaiObject XML files (default: xml)")
-    parser.add_argument("--translations", default="translations", help="Directory containing translation XML files (default: translations)")
+    parser = argparse.ArgumentParser(
+        description="Parse Nomai XML dialogue files into an SQLite database.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "--db",
+        default="nomai.db",
+        metavar="PATH",
+        help="SQLite database to write to",
+    )
+    parser.add_argument(
+        "--xml",
+        default="xml",
+        metavar="DIR",
+        help="directory of NomaiObject dialogue XML files",
+    )
+    parser.add_argument(
+        "--translations",
+        default="translations",
+        metavar="DIR",
+        help="directory of TranslationTable XML files",
+    )
     args = parser.parse_args()
 
     db_path = Path(args.db)
