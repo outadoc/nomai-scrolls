@@ -1,3 +1,4 @@
+import hashlib
 import sqlite3
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -134,7 +135,6 @@ main {
 }
 
 .comment-author {
-    color: var(--accent);
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -160,6 +160,7 @@ class _Block:
 class CommentNode:
     block_id: int
     speaker: str | None
+    speaker_color: str | None
     body_html: Markup
     children: list["CommentNode"] = field(default_factory=list)
 
@@ -175,6 +176,16 @@ def _display_name(name: str) -> str:
     return name.replace("_", " ")
 
 
+def _speaker_color(name: str) -> str:
+    # Derive a stable hue from the speaker name so each character gets a
+    # consistent colour across all pages. Two bytes of MD5 give a 0–65535
+    # range before modulo, distributing hues evenly. S/L are fixed for
+    # readability on the dark background.
+    digest = hashlib.md5(name.upper().encode()).digest()
+    hue = (digest[0] << 8 | digest[1]) % 360
+    return f"hsl({hue}, 70%, 70%)"
+
+
 def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[CommentNode]:
     nodes: dict[int, CommentNode] = {}
     children_map: dict[int | None, list[CommentNode]] = {}
@@ -184,6 +195,7 @@ def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[Comm
         node = CommentNode(
             block_id=b.block_id,
             speaker=b.speaker,
+            speaker_color=_speaker_color(b.speaker) if b.speaker else None,
             body_html=Markup(text_to_html(translated)),
         )
         nodes[b.block_id] = node

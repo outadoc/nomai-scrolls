@@ -3,7 +3,7 @@
 {% block content %}
 {% macro render_comment(comment) %}
 <div class="comment">
-  {% if comment.speaker %}<div class="comment-author">{{ comment.speaker }}</div>{% endif %}
+  {% if comment.speaker %}<div class="comment-author" style="color:{{ comment.speaker_color }}">{{ comment.speaker }}</div>{% endif %}
   <div class="comment-body">{{ comment.body_html }}</div>
   {% if comment.children %}
   <div class="replies">
