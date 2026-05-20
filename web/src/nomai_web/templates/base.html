@@ -95,20 +95,28 @@
                 <p
                     class="text-sm text-gray-600 dark:text-zinc-400 leading-relaxed"
                 >
-                    If you haven't played it yet,
+                    This site contains <strong>MAJOR</strong> spoilers to one of
+                    the best games ever made. If you haven't played it yet,
                     <a
                         href="https://www.mobiusdigitalgames.com/outer-wilds.html"
                         class="text-orange-600 dark:text-orange-500 hover:underline"
                         >buy the game</a
-                    >. This site contains major spoilers, and you really have to
-                    experience this game properly, trust me!
+                    >
+                    and enjoy it.
                 </p>
-                <button
-                    onclick="dismissSpoilerWarning()"
-                    class="mt-1 self-end bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer"
-                >
-                    I understand
-                </button>
+                <div class="mt-1 flex justify-end gap-2">
+                    <a
+                        href="https://www.mobiusdigitalgames.com/outer-wilds.html"
+                        class="text-sm text-gray-500 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 px-4 py-2 rounded-lg transition-colors no-underline"
+                        >I'm not sure…</a
+                    >
+                    <button
+                        onclick="dismissSpoilerWarning()"
+                        class="bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer"
+                    >
+                        I've played it already!
+                    </button>
+                </div>
             </div>
         </div>
         <script>
