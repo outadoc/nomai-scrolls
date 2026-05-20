@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Nomai Texts{% endblock %}</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
   <style>em { font-style: italic; }</style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 font-sans text-sm leading-normal min-h-screen">
-  <header class="bg-zinc-900 border-b border-zinc-800 px-5 py-2 sticky top-0 z-10 flex items-center gap-4">
-    <a href="{{ home_path }}" class="text-orange-500 font-bold text-lg italic no-underline shrink-0 hover:opacity-80">r/NomaiTexts</a>
+<body class="bg-gray-50 text-gray-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans text-sm leading-normal min-h-screen">
+  <header class="bg-white border-b border-gray-200 dark:bg-zinc-900 dark:border-zinc-800 px-5 py-2 sticky top-0 z-10 flex items-center gap-4">
+    <a href="{{ home_path }}" class="text-orange-600 dark:text-orange-500 font-bold text-lg italic no-underline shrink-0 hover:opacity-80">r/NomaiTexts</a>
     <nav class="flex flex-wrap gap-1 ml-auto">
       {% for code, url in lang_links %}
-      <a href="{{ url }}" class="no-underline text-xs px-2 py-0.5 rounded border {% if code == lang %}text-orange-500 font-semibold border-orange-500{% else %}text-zinc-400 border-transparent hover:text-zinc-100 hover:bg-zinc-800{% endif %}">{{ code }}</a>
+      <a href="{{ url }}" class="no-underline text-xs px-2 py-0.5 rounded border {% if code == lang %}text-orange-600 dark:text-orange-500 font-semibold border-orange-500{% else %}text-gray-500 dark:text-zinc-400 border-transparent hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800{% endif %}">{{ code }}</a>
       {% endfor %}
     </nav>
   </header>
