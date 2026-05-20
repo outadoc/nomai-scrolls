@@ -37,14 +37,25 @@ def _display_name(name: str) -> str:
     return name.replace("_", " ")
 
 
+_SPEAKER_COLORS = [
+    "#c0392b",  # crimson
+    "#d35400",  # burnt orange
+    "#b7770d",  # amber
+    "#27ae60",  # emerald
+    "#16a085",  # teal
+    "#2980b9",  # steel blue
+    "#8e44ad",  # purple
+    "#c0168a",  # magenta
+    "#1f7a8c",  # slate cyan
+    "#6d4c41",  # warm brown
+    "#00838f",  # dark cyan
+    "#558b2f",  # olive green
+]
+
+
 def _speaker_color(name: str) -> str:
-    # Derive a stable hue from the speaker name so each character gets a
-    # consistent colour across all pages. Two bytes of MD5 give a 0–65535
-    # range before modulo, distributing hues evenly. S/L are fixed for
-    # readability on the dark background.
     digest = hashlib.md5(name.upper().encode()).digest()
-    hue = (digest[0] << 8 | digest[1]) % 360
-    return f"hsl({hue}, 70%, 70%)"
+    return _SPEAKER_COLORS[int.from_bytes(digest[:2], "big") % len(_SPEAKER_COLORS)]
 
 
 def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[CommentNode]:
