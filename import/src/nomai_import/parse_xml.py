@@ -48,6 +48,14 @@ def parse_file(path: Path) -> tuple[int, str, list[TextBlock]]:
 
         blocks.append(TextBlock(block_id, parent_block_id, text, default_font_override, speaker))
 
+    # Recording files store a linear audio log as a flat list — the XML has no
+    # <ParentID> elements, but the in-file comment (e.g. "1 - 2 - 3 - 4 - 5")
+    # confirms the blocks are meant to form a single chain. Synthesise the
+    # parent links so they render as a thread instead of disconnected root blocks.
+    if "Recording" in name:
+        for i in range(1, len(blocks)):
+            blocks[i].parent_block_id = blocks[i - 1].block_id
+
     return file_id, name, blocks
 
 
