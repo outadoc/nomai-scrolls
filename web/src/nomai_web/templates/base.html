@@ -31,13 +31,29 @@
                     class="no-underline text-xs px-2 py-0.5 rounded border text-gray-500 dark:text-zinc-400 border-transparent hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800"
                     >GitHub</a
                 >
-                <span class="w-px self-stretch bg-gray-200 dark:bg-zinc-700 mx-1"></span>
+                <span
+                    class="w-px self-stretch bg-gray-200 dark:bg-zinc-700 mx-1"
+                ></span>
                 <div class="relative">
                     <button
                         id="lang-btn"
                         onclick="toggleLangDropdown()"
                         class="no-underline text-xs px-2 py-0.5 rounded border text-gray-500 dark:text-zinc-400 border-transparent hover:text-gray-900 hover:bg-gray-100 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 flex items-center gap-1 cursor-pointer bg-transparent"
-                    >{{ lang }} <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></button>
+                    >
+                        {{ lang }}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-3 h-3"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </button>
                     <div
                         id="lang-dropdown"
                         class="hidden absolute right-0 top-full mt-1 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 rounded-lg shadow-lg py-1 z-50 min-w-[5rem]"
@@ -66,15 +82,26 @@
                 <h2
                     class="text-lg font-semibold text-gray-900 dark:text-zinc-100"
                 >
-                    Spoiler warning
+                    Before we start…
                 </h2>
                 <p
                     class="text-sm text-gray-600 dark:text-zinc-400 leading-relaxed"
                 >
-                    This site contains the full Nomai dialogue from
-                    <em>Outer Wilds</em>, including text from late-game areas.
-                    Proceed only if you have finished the game or don't mind
-                    spoilers.
+                    This is an unofficial fan site presenting the Nomai dialogue
+                    from <em>Outer Wilds</em>, a game by Mobius Digital and
+                    published by Annapurna Interactive. All dialogue belongs to
+                    its respective owners.
+                </p>
+                <p
+                    class="text-sm text-gray-600 dark:text-zinc-400 leading-relaxed"
+                >
+                    If you haven't played it yet,
+                    <a
+                        href="https://www.mobiusdigitalgames.com/outer-wilds.html"
+                        class="text-orange-600 dark:text-orange-500 hover:underline"
+                        >buy the game</a
+                    >. This site contains major spoilers, and you really have to
+                    experience this game properly, trust me!
                 </p>
                 <button
                     onclick="dismissSpoilerWarning()"
@@ -86,7 +113,9 @@
         </div>
         <script>
             function toggleLangDropdown() {
-                document.getElementById("lang-dropdown").classList.toggle("hidden");
+                document
+                    .getElementById("lang-dropdown")
+                    .classList.toggle("hidden");
             }
             document.addEventListener("click", function (e) {
                 var btn = document.getElementById("lang-btn");
