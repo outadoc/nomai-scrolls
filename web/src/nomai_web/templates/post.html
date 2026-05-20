@@ -2,21 +2,21 @@
 {% block title %}{{ display_name }} – Nomai Texts{% endblock %}
 {% block content %}
 {% macro render_comment(comment) %}
-<div class="comment">
-  {% if comment.speaker %}<div class="comment-author" style="color:{{ comment.speaker_color }}">{{ comment.speaker }}</div>{% endif %}
-  <div class="comment-body">{{ comment.body_html }}</div>
+<div class="border-l-2 border-zinc-800 pl-4 py-1 my-1">
+  {% if comment.speaker %}<div class="text-xs font-semibold mb-1 uppercase tracking-wider" style="color:{{ comment.speaker_color }}">{{ comment.speaker }}</div>{% endif %}
+  <div class="text-zinc-200 leading-relaxed break-words">{{ comment.body_html }}</div>
   {% if comment.children %}
-  <div class="replies">
+  <div class="mt-2">
     {% for child in comment.children %}{{ render_comment(child) }}{% endfor %}
   </div>
   {% endif %}
 </div>
 {% endmacro %}
-<div class="post-header">
-  <a class="back-link" href="{{ feed_path }}">← back to feed</a>
-  <h1>{{ display_name }}</h1>
+<div class="mb-6">
+  <a class="inline-flex items-center gap-1 text-zinc-500 hover:text-sky-400 text-xs no-underline mb-3" href="{{ feed_path }}">← back to feed</a>
+  <h1 class="text-2xl font-semibold">{{ display_name }}</h1>
 </div>
-<div class="comments">
+<div class="flex flex-col">
   {% for comment in tree %}{{ render_comment(comment) }}{% endfor %}
 </div>
 {% endblock %}

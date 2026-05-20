@@ -8,145 +8,6 @@ from markupsafe import Markup
 
 from nomai_web.render import text_to_html
 
-_CSS = """\
-:root {
-    --bg: #1a1a1b;
-    --surface: #272729;
-    --border: #343536;
-    --text: #d7dadc;
-    --muted: #818384;
-    --accent: #ff4500;
-    --link: #4fbdff;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    min-height: 100vh;
-}
-
-a { color: var(--link); }
-a:hover { text-decoration: underline; }
-
-header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.site-title {
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 18px;
-    font-style: italic;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-.site-title:hover { opacity: 0.8; text-decoration: none; }
-
-.lang-selector {
-    display: flex;
-    gap: 4px;
-    flex-wrap: wrap;
-    margin-left: auto;
-}
-
-.lang-link {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 12px;
-    padding: 2px 7px;
-    border-radius: 3px;
-    border: 1px solid transparent;
-}
-.lang-link:hover { color: var(--text); background: var(--border); text-decoration: none; }
-.lang-link.active { color: var(--accent); font-weight: 700; border-color: var(--accent); }
-
-main {
-    max-width: 740px;
-    margin: 16px auto;
-    padding: 0 8px;
-}
-
-/* Feed */
-.feed { display: flex; flex-direction: column; gap: 4px; }
-
-.post {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    display: flex;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-    transition: border-color 0.1s;
-}
-.post:hover { border-color: var(--muted); }
-
-.post-info { flex: 1; min-width: 0; }
-
-.post-title {
-    color: var(--text);
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    line-height: 1.3;
-}
-.post-title:hover { color: var(--link); text-decoration: none; }
-
-.post-meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
-
-/* Post page */
-.post-header {
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-}
-
-.back-link {
-    display: inline-block;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 12px;
-    margin-bottom: 8px;
-}
-.back-link:hover { color: var(--link); }
-
-.post-header h1 { font-size: 22px; font-weight: 500; }
-
-/* Comments */
-.comments { display: flex; flex-direction: column; }
-
-.comment {
-    border-left: 2px solid var(--border);
-    padding: 8px 0 4px 12px;
-    margin: 4px 0;
-}
-
-.comment-author {
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.comment-body { color: var(--text); line-height: 1.6; word-break: break-word; }
-
-.replies { margin-top: 8px; }
-"""
-
 
 @dataclass
 class _Block:
@@ -242,8 +103,6 @@ def generate(db_path: Path, out_dir: Path) -> None:
         for name in file_names
     ]
 
-    (out_dir / "style.css").write_text(_CSS, encoding="utf-8")
-
     # Root index: redirect to English (or first available language)
     default_lang = "en" if "en" in languages else languages[0]
     (out_dir / "index.html").write_text(
@@ -268,7 +127,6 @@ def generate(db_path: Path, out_dir: Path) -> None:
                 posts=posts,
                 lang=lang,
                 lang_links=lang_links,
-                css_path="../style.css",
                 home_path="../index.html",
             ),
             encoding="utf-8",
@@ -284,7 +142,6 @@ def generate(db_path: Path, out_dir: Path) -> None:
                     tree=tree,
                     lang=lang,
                     lang_links=[(code, f"../../{code}/{name}/index.html") for code in languages],
-                    css_path="../../style.css",
                     home_path="../../index.html",
                     feed_path="../index.html",
                 ),
