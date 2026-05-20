@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ display_name }} – Nomai Texts{% endblock %}
+{% block content %}
+{% macro render_comment(comment) %}
+<div class="comment">
+  {% if comment.speaker %}<div class="comment-author">{{ comment.speaker }}</div>{% endif %}
+  <div class="comment-body">{{ comment.body_html }}</div>
+  {% if comment.children %}
+  <div class="replies">
+    {% for child in comment.children %}{{ render_comment(child) }}{% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}
+<div class="post-header">
+  <a class="back-link" href="{{ root_path }}index.html">← back to feed</a>
+  <h1>{{ display_name }}</h1>
+</div>
+<div class="comments">
+  {% for comment in tree %}{{ render_comment(comment) }}{% endfor %}
+</div>
+{% endblock %}

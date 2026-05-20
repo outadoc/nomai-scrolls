@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(web/.venv/bin/nomai-web --db nomai.db --out out_fr --lang fr)"
+    ]
+  }
+}

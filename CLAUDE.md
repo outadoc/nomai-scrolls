@@ -4,17 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Tools for exploring Outer Wilds Nomai dialogue. Raw XML assets (extracted via AssetRipper) are parsed into an SQLite database, which the TUI browses.
+Tools for exploring Outer Wilds Nomai dialogue. Raw XML assets (extracted via AssetRipper) are parsed into an SQLite database, which the TUI and static site generator can browse.
 
 ## Repository layout
 
-Three independent Python projects, each with its own `.venv`:
+Four independent Python projects, each with its own `.venv`:
 
 | Directory | Purpose |
 |-----------|---------|
 | `extract/` | One-shot scripts to scrape asset IDs and fetch raw XML files from a running AssetRipper server |
 | `import/`  | Parses the XML files into an SQLite database (`nomai_import` package) |
 | `app/`     | Textual TUI that browses the database (`nomai_db` package) |
+| `web/`     | Static site generator producing a Reddit-like HTML site (`nomai_web` package) |
 
 Each project has its own `pyproject.toml`. The `.venv/` directories are gitignored at the root.
 
@@ -26,6 +27,9 @@ cd import && python -m venv .venv && source .venv/bin/activate && pip install -e
 
 # TUI app (requires textual)
 cd app && python -m venv .venv && source .venv/bin/activate && pip install -e .
+
+# Static site generator (requires jinja2)
+cd web && python -m venv .venv && source .venv/bin/activate && pip install -e .
 ```
 
 ## Common commands
@@ -36,6 +40,14 @@ cd import && python -m nomai_import --db ../nomai.db
 
 # Launch the TUI (run from repo root)
 nomai-db-tui --db nomai.db
+
+# Generate static HTML site (run from repo root)
+nomai-web generate --db nomai.db --out out
+nomai-web generate --db nomai.db --out out --lang fr  # other codes: es, de, zh, jp, …
+
+# Generate and serve for local development
+nomai-web serve --db nomai.db             # → http://localhost:8000/
+nomai-web serve --db nomai.db --port 9000
 
 # Fetch new XML assets from AssetRipper (requires a running instance on :40913)
 cd extract
@@ -87,3 +99,13 @@ Built with [Textual](https://github.com/Textualize/textual). All data is loaded 
 - Language switching (←/→) and terminal resize both call `_update_tree()`, which re-queries the content width from the widget before re-rendering
 - Game color markup `<color=orange>…</color>` is stored as-is and parsed at render time in `_parse_text()`
 - `\\n` in raw text is a two-character C# escape, not a real newline — converted by `re.sub(r"\\+n", "\n", raw, flags=re.IGNORECASE)`
+
+## web/ internals
+
+Reads from `nomai.db`, writes a self-contained static site to `--out` (default `out/`).
+
+- `render.py` — `text_to_html()` mirrors the TUI's `_parse_text()`: handles `\\n` escapes, maps `<color=name>…</color>` to `<span style="color:…">`, and wraps everything in `html.escape()`
+- `site.py` — queries DB, builds `CommentNode` trees (same `parent_block_id` → children logic as the TUI), renders Jinja2 templates, writes `index.html` + one `{name}/index.html` per dialogue file
+- `templates/` — `base.html` (shell), `index.html` (feed), `post.html` (recursive `render_comment` macro for nested replies)
+- CSS lives inline in `site.py` as `_CSS` and is written to `out/style.css`; post pages reference it as `../style.css`
+- `body_html` fields are `markupsafe.Markup` objects so Jinja2's autoescape doesn't re-escape already-rendered HTML

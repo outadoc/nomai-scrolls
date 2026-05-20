@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nomai-web"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["jinja2"]
+
+[project.scripts]
+nomai-web = "nomai_web.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nomai_web"]

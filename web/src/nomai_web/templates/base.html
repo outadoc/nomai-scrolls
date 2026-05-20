@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Nomai Texts{% endblock %}</title>
+  <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+  <header>
+    <a href="{{ root_path }}index.html" class="site-title">r/NomaiTexts</a>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
