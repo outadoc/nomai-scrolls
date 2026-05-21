@@ -27,7 +27,7 @@ jobs:
         run: pip install ./import
 
       - name: Build database
-        run: python -m nomai_import --db nomai.db
+        run: python -m nomai_import --db nomai.db --xml import/xml --translations import/translations
 
       - name: Install nomai-web
         run: pip install ./web
