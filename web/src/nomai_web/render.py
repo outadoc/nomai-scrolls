@@ -38,7 +38,7 @@ def _process(text: str) -> str:
             parts.append(_escape(_STRAY_TAG_RE.sub("", text[pos:m.start()])))
         if m.group("color") is not None:
             color = _COLOR_MAP.get(m.group("color").lower(), m.group("color"))
-            parts.append(f'<span style="color:{color}">{_process(m.group("color_body"))}</span>')
+            parts.append(f'<strong style="color:{color}">{_process(m.group("color_body"))}</strong>')
         elif m.group("italic_body") is not None:
             parts.append(f"<em>{_process(m.group('italic_body'))}</em>")
         else:
