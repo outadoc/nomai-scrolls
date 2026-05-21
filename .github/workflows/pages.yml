@@ -23,6 +23,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install nomai-import
+        run: pip install ./import
+
+      - name: Build database
+        run: python -m nomai_import --db nomai.db
+
       - name: Install nomai-web
         run: pip install ./web
 
