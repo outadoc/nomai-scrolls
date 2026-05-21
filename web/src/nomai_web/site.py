@@ -1,4 +1,3 @@
-import hashlib
 import sqlite3
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -69,12 +68,13 @@ _SPEAKER_COLORS = [
 ]
 
 
-def _speaker_color(name: str) -> str:
-    digest = hashlib.md5(name.upper().encode()).digest()
-    return _SPEAKER_COLORS[int.from_bytes(digest[:2], "big") % len(_SPEAKER_COLORS)]
-
-
 def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[CommentNode]:
+    # Assign palette colors by order of first appearance so no two speakers share a color.
+    speaker_colors: dict[str, str] = {}
+    for b in blocks:
+        if b.speaker and b.speaker not in speaker_colors:
+            speaker_colors[b.speaker] = _SPEAKER_COLORS[len(speaker_colors) % len(_SPEAKER_COLORS)]
+
     nodes: dict[int, CommentNode] = {}
     children_map: dict[int | None, list[CommentNode]] = {}
 
@@ -83,7 +83,7 @@ def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[Comm
         node = CommentNode(
             block_id=b.block_id,
             speaker=b.speaker,
-            speaker_color=_speaker_color(b.speaker) if b.speaker else None,
+            speaker_color=speaker_colors.get(b.speaker) if b.speaker else None,
             body_html=Markup(text_to_html(translated)),
         )
         nodes[b.block_id] = node
