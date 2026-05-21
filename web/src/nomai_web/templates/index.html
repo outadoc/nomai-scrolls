@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import render_comment %}
 {% block title %}Nomai Texts{% endblock %}
+{% block description %}<meta name="description" content="An unofficial collection of Nomai dialogue from Outer Wilds." />{% endblock %}
 {% block content %}
 <div class="flex flex-col divide-y divide-gray-200 dark:divide-zinc-800">
   {% for post in posts %}
