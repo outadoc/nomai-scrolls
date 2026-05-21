@@ -53,27 +53,35 @@ def _display_name(name: str) -> str:
 
 
 _SPEAKER_COLORS = [
-    "#c0392b",  # crimson
-    "#d35400",  # burnt orange
-    "#b7770d",  # amber
-    "#27ae60",  # emerald
-    "#16a085",  # teal
-    "#2980b9",  # steel blue
-    "#8e44ad",  # purple
-    "#c0168a",  # magenta
-    "#1f7a8c",  # slate cyan
-    "#6d4c41",  # warm brown
-    "#00838f",  # dark cyan
-    "#558b2f",  # olive green
+    "#009162",
+    "#00bdc5",
+    "#00e5ff",
+    "#006ee5",
+    "#5b93ff",
+    "#c7bbff",
+    "#942acf",
+    "#df63d1",
+    "#ff9dd4",
+    "#d10036",
+    "#fd6326",
+    "#ffb34c",
+    "#a85300",
+    "#aca000",
+    "#abe267",
+    "#008d00",
 ]
 
 
-def _build_tree(blocks: list[_Block], translations: dict[str, str]) -> list[CommentNode]:
+def _build_tree(
+    blocks: list[_Block], translations: dict[str, str]
+) -> list[CommentNode]:
     # Assign palette colors by order of first appearance so no two speakers share a color.
     speaker_colors: dict[str, str] = {}
     for b in blocks:
         if b.speaker and b.speaker not in speaker_colors:
-            speaker_colors[b.speaker] = _SPEAKER_COLORS[len(speaker_colors) % len(_SPEAKER_COLORS)]
+            speaker_colors[b.speaker] = _SPEAKER_COLORS[
+                len(speaker_colors) % len(_SPEAKER_COLORS)
+            ]
 
     nodes: dict[int, CommentNode] = {}
     children_map: dict[int | None, list[CommentNode]] = {}
@@ -117,7 +125,9 @@ def generate(db_path: Path, out_dir: Path) -> None:
             file_blocks[name].append(_Block(block_id, parent_block_id, text, speaker))
 
         all_translations: dict[str, dict[str, str]] = {}
-        for lang_code, key, value in conn.execute("SELECT lang, key, value FROM translations"):
+        for lang_code, key, value in conn.execute(
+            "SELECT lang, key, value FROM translations"
+        ):
             all_translations.setdefault(lang_code, {})[key] = value
 
     env = Environment(
@@ -130,7 +140,7 @@ def generate(db_path: Path, out_dir: Path) -> None:
     (out_dir / "index.html").write_text(
         f'<!DOCTYPE html><html><head><meta charset="utf-8">'
         f'<meta http-equiv="refresh" content="0;url={default_lang}/index.html">'
-        f'</head><body></body></html>\n',
+        f"</head><body></body></html>\n",
         encoding="utf-8",
     )
 
@@ -142,10 +152,17 @@ def generate(db_path: Path, out_dir: Path) -> None:
         lang_dir = out_dir / lang
         lang_dir.mkdir(exist_ok=True)
 
-        lang_links = [(code, f"../{code}/index.html", _LANG_NAMES.get(code, code)) for code in languages]
+        lang_links = [
+            (code, f"../{code}/index.html", _LANG_NAMES.get(code, code))
+            for code in languages
+        ]
 
         posts = [
-            Post(name=name, display_name=_display_name(name), tree=_build_tree(file_blocks[name], translations))
+            Post(
+                name=name,
+                display_name=_display_name(name),
+                tree=_build_tree(file_blocks[name], translations),
+            )
             for name in file_names
         ]
 
@@ -169,7 +186,14 @@ def generate(db_path: Path, out_dir: Path) -> None:
                     display_name=_display_name(name),
                     tree=tree,
                     lang=lang,
-                    lang_links=[(code, f"../../{code}/{name}/index.html", _LANG_NAMES.get(code, code)) for code in languages],
+                    lang_links=[
+                        (
+                            code,
+                            f"../../{code}/{name}/index.html",
+                            _LANG_NAMES.get(code, code),
+                        )
+                        for code in languages
+                    ],
                     home_path="../../index.html",
                     feed_path="../index.html",
                 ),
